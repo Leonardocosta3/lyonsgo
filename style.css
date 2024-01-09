@@ -18,13 +18,12 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(194, 186, 186, 0.247);
-
-
 }
-
+/*Tela de Login*/
 .container-login {
+    display: none;
     width: 400px;
-    height: 50vh;
+    height: 100%vh;
     text-align: center;
     
 }
@@ -41,15 +40,12 @@ body {
 }
 .form-header{
     font-family: var(--fonte2);
-    font-size:2em;
     font-weight: bold;
     color:rgb(17, 17, 75);
     padding-top:10px;
+    font-size: 1.5em;
 }
-.input-group{
-    display: block;
-    
-}
+
 .input-box{
     display: flex;
     flex-direction: column;
@@ -84,10 +80,102 @@ body {
     text-decoration: none;
     color: rgb(11, 170, 209);;
 }
+
+/*Primeiro Acesso*/
+
 .container-pa {
+    width: 400px;
+    height: 100%vh;
+    text-align: center;
     display: none;
+   
 }
 
+
+.exemplo{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px 15px 15px;
+}
+.exemplo input{
+   margin-bottom: 10px;
+   padding: 3px;
+}
+.input-senha{
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    margin-bottom: 20px;
+}
+.text-pa{
+    text-align: left;
+    padding-left: 10px;
+}
+.input-senha input{
+    margin: 6px;
+}
+
+.dominio{
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    margin: 20px 15px;
+    padding-bottom: 10px;
+}
+.dom{
+    text-align: left;
+    margin: 10px 0 10px 10px;
+    font-weight: bold;
+}
+.dom input{
+    padding-left:19px
+}
+
+/*Recuperar senha*/
 .container-rs {
-    display: none;
+    width: 400px;
+    height: 100%vh;
+    text-align: center; 
+}
+.input-group-rs{
+    display:flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+.input-group-rs input{
+    margin-bottom: 20px;
+    padding: 6px;
+}
+.input-group-rs button{
+    margin: 0 0 16px 0;
+    padding: 8px;
+
+}
+
+/*Administração*/
+.header{
+    background-color: black;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;  
+}
+
+.adm-logo{
+    width: 100px;
+    margin-left: 5%;
+    margin-right: 4%;
+    
+}
+.adm-label{
+    color: white;
+}
+.adm-sair{
+    width: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    cursor: pointer;
 }

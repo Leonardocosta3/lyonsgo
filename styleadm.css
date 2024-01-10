@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: rgba(194, 186, 186, 0.247);
+    background-color: rgba(194, 186, 186, 0.329);
 }
 
 .header{
@@ -44,48 +44,174 @@ body {
 
 .container-adm{
     width: 100%;
-    margin-top: 100px;
-    margin-left: 10%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    margin-top: 80px;
+    padding-left: 10%;
+    display: none;
+   
 
 }
 
 .cadastro{
-    border-radius: 7px;
-    min-width: 200px;
-    border: 1px solid rgba(0, 0, 0, 0.459);
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.233);
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    margin-right: 4%;
+    width: 240px;
+    height: 20vh;
+    border-radius: 6px;
     display: flex;
-    margin-right: 40px;
-    padding: 30px;
-    margin-bottom: 40px;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    margin: 20px;
     
 }
+
 .cadastro-label{
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .cadastro-icon{
     width: 50px;
+    height: 45px;
     margin-left: 15px;
     
 }
+.cadastro:hover, .cadastro-label:hover{
+    cursor: pointer;
+}
 .lista{
-    border-radius: 7px;
-    min-width: 200px;
-    border: 1px solid rgba(0, 0, 0, 0.61);
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.233);
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    margin-right: 40px;
+    width: 240px;
+    height: 20vh;
+    border-radius: 6px;
     display: flex;
-    padding: 30px;
-    margin-bottom: 40px;
+    justify-content: center;
+    align-items:center;
+    margin: 20px;
+
+    
   
 }
 .lista-label{
-    font-size: 1.5em;
+    font-size: 1.3em;
     
 }
 
 .lista-icon{
     width: 50px;
     margin-left: 56px;
+}
+.lista:hover, .lista-label:hover{
+    cursor: pointer;
+}
+
+/*Pagina de cadastro de novo usuário*/
+
+.container-adm-form{
+    width: 90%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+}
+
+.title-form{
+    display: flex;
+    flex-direction: row;
+    margin-bottom:23px;
+}
+.label-form{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.form-btn-voltar{
+    font-size: 0.9em;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 7px;
+    background-color: rgb(11, 170, 209);
+    color: white;
+    padding: 6px 25px;
+    position: absolute;
+    right:0;
+    margin-right: 100px;
+}
+.adm-form{
+    display: flex;
+    flex-direction: column;
+}
+.nome-form{
+    font-weight: bold;
+}
+.input-nome-form{
+    padding: 9px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    border-radius: 2px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.adm-form-group{
+    display: flex;
+    flex-direction: row;
+    width: 92%;
+    margin-bottom: 30px;
+}
+.form-group-email{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.form-group-tel{
+    margin-left: 20px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-form{
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+.input-email-form{
+    padding: 9px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    border-radius: 2px;
+}
+.tel-form{
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+.input-tel-form{
+    padding: 9px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    border-radius: 2px;
+}
+
+.form-group-rodape{
+
+}
+.rodape-form{
+
+}
+.form-btn-salvar{
+    font-size: 0.9em;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 7px;
+    background-color: rgb(11, 170, 209);
+    color: white;
+    padding: 6px 25px;
+    margin-top: 20px;
+}
+.form-btn-salvar:hover, .form-btn-voltar:hover{
+    cursor: pointer;
 }

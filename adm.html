@@ -13,11 +13,35 @@
             <img class="adm-sair" src="imagens/icones/sair-3.png" alt="saida">
     </header>
     <div class="container-adm">
-        <div class="cadastro">
-            <label class="cadastro-label" for="cadastro-label">Cadastra novo <br>usuário</label> <img class="cadastro-icon" src="imagens/icones/user.png" alt="cadastro-icon">
-        </div>
-        <div class="lista">
+        <button class="cadastro">
+            <label class="cadastro-label" for="cadastro-label">Cadastrar novo <br>usuário</label> <img class="cadastro-icon" src="imagens/icones/user.png" alt="cadastro-icon">
+        </button>
+        <button class="lista">
             <label class="lista-label" for="lista-label">Lista de <br>usuários</label> <img class="lista-icon" src="imagens/icones/lista.png" alt="lista-icon">
+        </button>
+    </div>
+    <div class="container-adm-form">
+        <div class="title-form">
+            <label for="form-title" class="label-form">Cadastrar novo usuário</label>
+            <button class="form-btn-voltar">Voltar</button>
+        </div>
+        <div class="adm-form">
+            <label for="nome-form" class="nome-form">Nome completo</label>
+            <input type="nome" class="input-nome-form" required>
+            <div class="adm-form-group">
+                <div class="form-group-email">
+                    <label for="text" class="email-form">E-mail</label>
+                    <input type="email" class="input-email-form" required>
+                </div>
+                <div class="form-group-tel">
+                    <label for="tel" class="tel-form">Telefone</label>
+                <input type="text" class="input-tel-form" placeholder="(00) 90000-0000" required>
+                </div> 
+            </div>
+        </div>
+        <div class="form-group-rodape">
+            <label for="text" class="rodape-form">Será criada a senha Lyons@Lyons, que o usuário deverá alterar em seu primeiro login.</label>
+            <button class="form-btn-salvar">Salvar</button>
         </div>
     </div>
 </body>

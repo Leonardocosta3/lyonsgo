@@ -153,29 +153,3 @@ body {
 }
 
 /*Administração*/
-.header{
-    background-color: black;
-    height: 50px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;  
-}
-
-.adm-logo{
-    width: 100px;
-    margin-left: 5%;
-    margin-right: 4%;
-    
-}
-.adm-label{
-    color: white;
-}
-.adm-sair{
-    width: 20px;
-    position: absolute;
-    right: 0;
-    padding-right: 15px;
-    cursor: pointer;
-}

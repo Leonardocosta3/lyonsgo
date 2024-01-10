@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Poppins:wght@200&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fonte1: 'Passion One', sans-serif;
+    --fonte2: 'Poppins', sans-serif;
+    --fonte3: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgba(194, 186, 186, 0.247);
+}
+
+.header{
+    background-color: black;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;  
+}
+
+.adm-logo{
+    width: 100px;
+    margin-left: 5%;
+    margin-right: 4%;
+    
+}
+.adm-label{
+    color: white;
+}
+.adm-sair{
+    width: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 35px;
+    cursor: pointer;
+}
+
+.container-adm{
+    
+}
+
+.cadastro{
+}
+.cadastro-label{
+    
+}
+
+.cadastro-icon{
+    width: 50px;
+    
+}
+.lista{
+    
+}
+.lista-label{
+    
+}
+.lista-icon{
+    width: 50px;
+}

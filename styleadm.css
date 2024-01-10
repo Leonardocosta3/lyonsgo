@@ -43,25 +43,49 @@ body {
 }
 
 .container-adm{
-    
+    width: 100%;
+    margin-top: 100px;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
 }
 
 .cadastro{
+    border-radius: 7px;
+    min-width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    display: flex;
+    margin-right: 40px;
+    padding: 30px;
+    margin-bottom: 40px;
+    
 }
 .cadastro-label{
-    
+    font-size: 1.5em;
 }
 
 .cadastro-icon{
     width: 50px;
+    margin-left: 15px;
     
 }
 .lista{
-    
+    border-radius: 7px;
+    min-width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.61);
+    display: flex;
+    padding: 30px;
+    margin-bottom: 40px;
+  
 }
 .lista-label{
+    font-size: 1.5em;
     
 }
+
 .lista-icon{
     width: 50px;
+    margin-left: 56px;
 }

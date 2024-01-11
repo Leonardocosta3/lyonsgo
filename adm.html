@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administração</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="styleadm.css">
 </head>
 <body>
@@ -23,26 +24,47 @@
     <div class="container-adm-form">
         <div class="title-form">
             <label for="form-title" class="label-form">Cadastrar novo usuário</label>
-            <button class="form-btn-voltar">Voltar</button>
+            <input type="button" class="form-btn-voltar" value="Voltar">
         </div>
         <div class="adm-form">
-            <label for="nome-form" class="nome-form">Nome completo</label>
-            <input type="nome" class="input-nome-form" required>
-            <div class="adm-form-group">
-                <div class="form-group-email">
-                    <label for="text" class="email-form">E-mail</label>
-                    <input type="email" class="input-email-form" required>
+            <form nome="fcadastrar">
+                <label class="nome-form">Nome completo <span style="color:red">*</span></label>
+                <input type="text" nome="txtNome" class="input-nome-form" required />
+                <div class="adm-form-group">
+                    <div class="form-group-email">
+                        <label class="email-form">E-mail <span style="color:red">*</span></label>
+                        <input id="email" type="email" nome="txtEmail" class="input-email-form" required />
+                    </div>
+                    <div class="form-group-tel">
+                    <label class="tel-form">Telefone</label>
+                        <input type="text" nome="txtCelular" class="input-tel-form" placeholder="(00) 90000-0000" />
+                    </div> 
                 </div>
-                <div class="form-group-tel">
-                    <label for="tel" class="tel-form">Telefone</label>
-                <input type="text" class="input-tel-form" placeholder="(00) 90000-0000" required>
-                </div> 
-            </div>
+                <div class="form-group-rodape">
+                    <label for="text" class="rodape-form">Será criada a senha Lyons@Lyons, que o usuário deverá alterar em seu primeiro login.</label>
+                    <input type="button" class="form-btn-salvar" value="Salvar" onclick="cadPessoas()" />
+                </div>
+            </form>
+        </div> 
+    </div>
+    <div class="container-lista">
+        <div class="title-lista">
+            <label for="form-lista" class="label-lista">Cadastrar novo usuário</label>
+            <input type="button" class="lista-btn-voltar" value="Voltar">
         </div>
-        <div class="form-group-rodape">
-            <label for="text" class="rodape-form">Será criada a senha Lyons@Lyons, que o usuário deverá alterar em seu primeiro login.</label>
-            <button class="form-btn-salvar">Salvar</button>
+        <div class="table-lista">
+            <table id="tb-lista">
+                <thead>
+                    <tr>
+                        <td>Codigo</td>
+                        <td>Nome</td>
+                        <td>Email</td>
+                        <td>Celular</td>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
+
 </body>
 </html>

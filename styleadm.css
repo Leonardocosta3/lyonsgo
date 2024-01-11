@@ -50,8 +50,6 @@ body {
     margin-top: 80px;
     padding-left: 10%;
     display: none;
-   
-
 }
 
 .cadastro{
@@ -136,7 +134,7 @@ body {
     font-weight: bold;
     border: transparent;
     border-radius: 7px;
-    background-color: rgb(11, 170, 209);
+    background-color: grey;
     color: white;
     padding: 6px 25px;
     position: absolute;
@@ -197,12 +195,14 @@ body {
 }
 
 .form-group-rodape{
-
+    display: flex;
+    flex-direction: column;
 }
 .rodape-form{
 
 }
 .form-btn-salvar{
+    width: 100px;
     font-size: 0.9em;
     font-weight: bold;
     border: transparent;
@@ -212,6 +212,95 @@ body {
     padding: 6px 25px;
     margin-top: 20px;
 }
-.form-btn-salvar:hover, .form-btn-voltar:hover{
+.form-btn-voltar:hover{
     cursor: pointer;
+    background-color: rgb(11, 170, 209);
+    transition: 0.1s;
+    padding: 7px 26px;
+    
 }
+.form-btn-salvar:hover{
+    cursor: pointer;
+    transition: 0.1s;
+    padding: 7px;
+}
+
+/*Pagina de lista de usuários*/
+
+.container-lista{
+    width: 90%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%; 
+   
+}
+.title-lista{
+    display: flex;
+    flex-direction: row;
+    margin-bottom:40px;
+}
+.label-lista{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.lista-btn-voltar{
+    font-size: 0.9em;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 7px;
+    background-color: grey;
+    color: white;
+    padding: 6px 25px;
+    position: absolute;
+    right:0;
+    margin-right: 100px;
+}
+.cabeçalho-lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    width: 90%;
+    margin-bottom: 10px;
+}
+.lista-btn-voltar:hover{
+    cursor: pointer;
+    background-color: rgb(11, 170, 209);
+    transition: 0.1s;
+    padding: 7px 26px;
+}
+.table-lista{
+    
+}
+table, tr, td{
+    width: 100px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+tr:nth-child(even){
+    background-color:rgb(75, 68, 68);
+}
+
+.table-01{
+    
+    width: 370px;
+    text-align: left;
+}
+.table-02{
+   
+    width: 310px;
+    text-align: left;
+}
+
+.table-03{
+   
+    width: 300px;
+    text-align: left;
+}
+.table-04{
+   
+    width: 70px;
+    text-align: center;
+}
+

@@ -21,7 +21,6 @@ body {
 }
 /*Tela de Login*/
 .container-login {
-    display: none;
     width: 400px;
     height: 100%vh;
     text-align: center;
@@ -134,7 +133,8 @@ body {
 .container-rs {
     width: 400px;
     height: 100%vh;
-    text-align: center; 
+    text-align: center;
+    display: none;
 }
 .input-group-rs{
     display:flex;

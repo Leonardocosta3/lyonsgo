@@ -3,7 +3,9 @@
 * {
     margin: 0;
     padding: 0;
+
 }
+
 
 :root {
     --fonte1: 'Passion One', sans-serif;
@@ -49,7 +51,7 @@ body {
     flex-wrap: wrap;
     margin-top: 80px;
     padding-left: 10%;
-    display: none;
+
 }
 
 .cadastro{
@@ -65,6 +67,7 @@ body {
     text-align: left;
     align-items: center;
     margin: 20px;
+    
     
 }
 
@@ -118,6 +121,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-left: 10%;
+    display: none;
 }
 
 .title-form{
@@ -232,13 +236,15 @@ body {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    padding-left: 10%; 
+    padding-left: 10%;
+    display: none;
    
 }
 .title-lista{
     display: flex;
     flex-direction: row;
     margin-bottom:40px;
+    
 }
 .label-lista{
     font-size: 1.6em;
@@ -256,14 +262,7 @@ body {
     right:0;
     margin-right: 100px;
 }
-.cabeçalho-lista{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-weight: bold;
-    width: 90%;
-    margin-bottom: 10px;
-}
+
 .lista-btn-voltar:hover{
     cursor: pointer;
     background-color: rgb(11, 170, 209);
@@ -271,36 +270,38 @@ body {
     padding: 7px 26px;
 }
 .table-lista{
-    
+    margin-right: 100px;
 }
-table, tr, td{
-    width: 100px;
-    margin-left: 30px;
-    margin-right: 50px;
+table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
 }
 tr:nth-child(even){
-    background-color:rgb(75, 68, 68);
+    background-color:rgba(73, 70, 70, 0.144);
+}
+table th {
+    padding-bottom: 5px;
+    padding-right: 20px;
 }
 
-.table-01{
+table td{
+    border-top: 1px solid rgba(0, 0, 0, 0.384);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.384);
+    padding:6px 7px 6px 0;
+}
+table td img {
+    width: 22px;
+    margin: 0;
+    padding-left: 15px;
+    text-align:center;
     
-    width: 370px;
-    text-align: left;
-}
-.table-02{
-   
-    width: 310px;
-    text-align: left;
 }
 
-.table-03{
-   
-    width: 300px;
-    text-align: left;
+.edit{
+    margin: 1px;
+    width: 10px;
 }
-.table-04{
-   
-    width: 70px;
-    text-align: center;
+div#container-table{
+    overflow-x:auto ;
 }
-

@@ -51,6 +51,7 @@ body {
     flex-wrap: wrap;
     margin-top: 80px;
     padding-left: 10%;
+    
 
 }
 
@@ -122,6 +123,7 @@ body {
     flex-direction: column;
     padding-left: 10%;
     display: none;
+    
 }
 
 .title-form{
@@ -157,15 +159,15 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.253);
     border-radius: 2px;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     width: 90%;
 }
 
 .adm-form-group{
     display: flex;
-    flex-direction: row;
     width: 92%;
     margin-bottom: 30px;
+    margin-top: 10px;
 }
 .form-group-email{
     width: 65%;
@@ -173,12 +175,10 @@ body {
     flex-direction: column;
 }
 .form-group-tel{
+    width: 33%;
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    width: 33%;
-    
-    
+    margin: 20px;
 }
 
 .email-form{

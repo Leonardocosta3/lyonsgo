@@ -9,7 +9,9 @@ btnEntrar.addEventListener('click', function(){
 
     ctnlogin.style.display = 'none';
     ctnPa.style.display = 'block';
-    ctnRs.style.display = 'none';
+    ctnRs.style.display = 'none';   
+
+
     
 })
 

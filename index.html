@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="scriptLogin.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <script src="scriptLogin.js"></script>
+    
 </head>
 <body>
-    <div id="container-lo" class="container-login">
+    <div id="container-login" class="container-login">
         <img id="logo-preta" src="imagens/logo-preta.png" alt="logo">
         <div class="form">
             <form>
@@ -20,14 +21,14 @@
                     </div>
                     <div class="button-login">
                         <input id="login-btn-entrar" class="button-entrar" type="button" value="Entrar">
-                        <a id="login-semsenha" class="semsenha" href="#"><label class="semsenha" for="semsenha">Esqueceu a senha?</label></a>
+                        <a class="semsenha"><label id="login-semsenha" class="semsenha" for="semsenha">Esqueceu a senha?</label></a>
                     </div>
                 </div>
             </form>      
         </div>
            
     </div>
-    <div id="container-Pa" class="container-pa">
+    <div id="container-pa" class="container-pa">
         <img id="logo-preta" src="imagens/logo-preta.png" alt="logo">
         <div class="form">
             <form action="primeiro-acesso">
@@ -39,8 +40,8 @@
                     </div>
                     <div class="input-senha">
                         <p class="text-pa">Digite sua nova senha</p>
-                        <input type="passwordtext" name="novasenha" id="password" placeholder="Nova Senha" required>
-                        <input type="passwordtext" name="novasenha" id="password" placeholder="Repita Nova Senha" required>
+                        <input type="passwordtext" name="novasenha" id="password" placeholder="Nova Senha">
+                        <input type="passwordtext" name="novasenha" id="password" placeholder="Repita Nova Senha">
                     </div>
                     <div class="dominio">
                          <p class="text-pa">Escolha seu domínio</p>
@@ -49,13 +50,13 @@
                              <input type="text" name="text" id="input-pa">
                          </div>
                     </div>
-                        <button class="button-entrar"type="button-pa">Salvar</button>
-                        <a class="semsenha" href="#"><label class="semsenha">Esqueceu a senha?</label></a>
+                        <input id="button-salvar" class="button-salvar" type="button" value="Salvar">
+                        <a class="semsenha"><label id="login-semsenha2"  class="semsenha">Esqueceu a senha?</label></a>
                 </div>
             </form>
         </div>    
     </div>
-    <div id="container-Rs" class="container-rs">
+    <div id="container-rs" class="container-rs">
         <div class="form">
             <form action="#">
                 <div class="form-header">Recuperar Senha</div>

@@ -1,54 +1,13 @@
 /*Navegação entre divs adm */
-var btnCadastrar = document.getElementById('btn-cadastro');
+var btnCadastrar = document.querySelector('#btn-cadastro');
 
 btnCadastrar.addEventListener('click', function(){
-    var ctnForm = document.getElementById('container-adm-form');
-    var ctnAdm = document.getElementById('container-adm');
-    var ctnLista = document.getElementById('container-lista');
 
-    ctnForm.style.display = "flex";
-    ctnAdm.style.display = "none";
-    ctnLista.style.display = "none";
-})
+    var admContainer = document.getElementById('container-adm');
 
-var btnLista = document.getElementById('btn-lista');
+    admContainer.classList.toggle("hidden");
 
-btnLista.addEventListener('click', function(){
-    var ctnForm = document.getElementById('container-adm-form');
-    var ctnAdm = document.getElementById('container-adm');
-    var ctnLista = document.getElementById('container-lista');
-
-    ctnForm.style.display = "none";
-    ctnAdm.style.display = "none";
-    ctnLista.style.display = "flex";
-
-})
-
-var btnVoltarCad = document.getElementById('form-btn-voltar');
-
-btnVoltarCad.addEventListener('click', function(){
-    var ctnForm = document.getElementById('container-adm-form');
-    var ctnAdm = document.getElementById('container-adm');
-    var ctnLista = document.getElementById('container-lista');
-
-    ctnForm.style.display = "none";
-    ctnAdm.style.display = "flex";
-    ctnLista.style.display = "none";
-
-})
-
-var btnVoltarLista = document.getElementById('lista-btn-voltar');
-
-btnVoltarLista.addEventListener('click', function(){
-    var ctnForm = document.getElementById('container-adm-form');
-    var ctnAdm = document.getElementById('container-adm');
-    var ctnLista = document.getElementById('container-lista');
-
-    ctnForm.style.display = "none";
-    ctnAdm.style.display = "flex";
-    ctnLista.style.display = "none";
-
-})
+});
 
 /* Área de cadastro de Clientes */
 class Cliente{

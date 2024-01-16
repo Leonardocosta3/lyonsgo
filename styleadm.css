@@ -50,8 +50,9 @@ body {
     flex-wrap: wrap;
     margin-top: 80px;
     padding-left: 10%;
+}
+.container-adm{
     display: flex;
-    
 }
 
 
@@ -119,12 +120,11 @@ body {
 #container-adm-form{
     width: 90%;
     margin-top: 80px;
-    display: flex;
     flex-direction: column;
     padding-left: 10%;
-    display: none;
     
 }
+
 
 .title-form{
     display: flex;
@@ -236,12 +236,10 @@ body {
 #container-lista{
     width: 90%;
     margin-top: 100px;
-    display: flex;
     flex-direction: column;
-    padding-left: 10%;
-    display: none;
-   
+    padding-left: 10%; 
 }
+
 .title-lista{
     display: flex;
     flex-direction: row;
@@ -311,5 +309,3 @@ div#container-table{
 .hidden {
     display: none;
 }
-
-.display 

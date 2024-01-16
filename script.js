@@ -1,13 +1,58 @@
 /*Navegação entre divs adm */
-var btnCadastrar = document.querySelector('#btn-cadastro');
 
-btnCadastrar.addEventListener('click', function(){
+var containerAdm = document.getElementById('container-adm');
+var containerForm = document.getElementById('container-adm-form');
+var containerLista = document.getElementById('container-lista');
 
-    var admContainer = document.getElementById('container-adm');
+var btnCadastro = document.getElementById('btn-cadastro');
+var btnLista = document.getElementById('btn-lista');
 
-    admContainer.classList.toggle("hidden");
+var btnVoltarForm = document.getElementById('form-btn-voltar');
+var btnVoltarLista = document.getElementById('lista-btn-voltar');
 
+btnCadastro.addEventListener('click', function () {
+    containerAdm.classList.add('hidden');
+    containerLista.classList.add('hidden');
+    containerForm.classList.remove('hidden');
+    localStorage.setItem('visible', 'container-adm-form');
+    
 });
+
+btnLista.addEventListener('click', function () {
+    containerAdm.classList.add('hidden');
+    containerForm.classList.add('hidden');
+    containerLista.classList.remove('hidden');
+    localStorage.setItem('visible', 'container-lista');
+});
+
+btnVoltarForm.addEventListener('click', function () {
+    containerAdm.classList.remove('hidden');
+    containerForm.classList.add('hidden');
+    containerLista.classList.add('hidden');
+    localStorage.setItem('visible', 'container-adm');
+});
+
+btnVoltarLista.addEventListener('click', function () {
+    containerAdm.classList.remove('hidden');
+    containerForm.classList.add('hidden');
+    containerLista.classList.add('hidden');
+    localStorage.setItem('visible', 'container-adm');
+});
+
+var visible = localStorage.getItem('visible');
+
+    // Se houver um estado armazenado, aplicá-lo
+    if (visible === 'container-adm-form') {
+      containerAdm.classList.add('hidden');
+      containerForm.classList.remove('hidden');
+      containerLista.classList.add('hidden');
+    } else if (visible === 'container-lista') {
+      containerAdm.classList.add('hidden');
+      containerForm.classList.add('hidden');
+      containerLista.classList.remove('hidden');
+    }
+
+
 
 /* Área de cadastro de Clientes */
 class Cliente{
@@ -24,7 +69,7 @@ class Cliente{
         }
         this.listaTabela();
         this.limpar();
-        
+        alert('Cliente salvo com sucesso!')
         
     }
 

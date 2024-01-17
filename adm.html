@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,21 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styleadm.css">
 </head>
+
 <body>
     <header class="header">
-            <img class="adm-logo" src="imagens/logo-branca.png" alt="logo-branca">
-            <label class="adm-label" for="adm">| Administração</label>
-            <img class="adm-sair" src="imagens/icones/sair-3.png" alt="saida">
+        <img class="adm-logo" src="imagens/logo-branca.png" alt="logo-branca">
+        <label class="adm-label" for="adm">| Administração</label>
+        <img class="adm-sair" src="imagens/icones/sair-3.png" alt="saida">
     </header>
     <div id="container-adm" class="container-adm">
         <button id="btn-cadastro" class="btn-cadastro">
-            <label class="cadastro-label" for="cadastro-label">Cadastrar novo <br>usuário</label> <img class="cadastro-icon" src="imagens/icones/user.png" alt="cadastro-icon">
+            <label class="cadastro-label" for="cadastro-label">Cadastrar novo <br>usuário</label> <img
+                class="cadastro-icon" src="imagens/icones/user.png" alt="cadastro-icon">
         </button>
         <button id="btn-lista" class="lista">
-            <label class="lista-label" for="lista-label">Lista de <br>usuários</label> <img class="lista-icon" src="imagens/icones/lista.png" alt="lista-icon">
+            <label class="lista-label" for="lista-label">Lista de <br>usuários</label> <img class="lista-icon"
+                src="imagens/icones/lista.png" alt="lista-icon">
         </button>
     </div>
     <div id="container-adm-form" class="container-adm hidden">
@@ -37,22 +41,24 @@
                     </div>
                     <div class="form-group-tel">
                         <label class="tel-form">Telefone<label>
-                        <input id="txtcel" type="text" nome="txtCelular" class="input-tel-form" placeholder="(00) 90000-0000">
-                    </div> 
+                                <input id="txtcel" type="text" nome="txtCelular" class="input-tel-form"
+                                    placeholder="(00) 90000-0000">
+                    </div>
                 </div>
                 <div class="form-group-rodape">
-                    <label for="text" class="rodape-form">Será criada a senha Lyons@Lyons, que o usuário deverá alterar em seu primeiro login.</label>
+                    <label for="text" class="rodape-form">Será criada a senha Lyons@Lyons, que o usuário deverá alterar
+                        em seu primeiro login.</label>
                     <input type="button" class="form-btn-salvar" value="Salvar" onclick="cliente.salvar()" />
                 </div>
             </form>
-        </div> 
-     </div>
+        </div>
+    </div>
 
-     <div id="container-lista" class="container-adm hidden">
+    <div id="container-lista" class="container-adm hidden">
         <div class="title-lista">
             <label class="label-lista">Lista de usuários</label>
             <button id="lista-btn-voltar" class="lista-btn-voltar">Voltar</button>
-            
+
         </div>
         <div id="container-table" class="table-lista">
             <table>
@@ -67,8 +73,9 @@
                 </tbody>
             </table>
         </div>
-     </div>
-    
+    </div>
+
 
 </body>
+
 </html>

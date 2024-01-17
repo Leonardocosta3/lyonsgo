@@ -15,7 +15,7 @@ btnCadastro.addEventListener('click', function () {
     containerLista.classList.add('hidden');
     containerForm.classList.remove('hidden');
     localStorage.setItem('visible', 'container-adm-form');
-    
+
 });
 
 btnLista.addEventListener('click', function () {
@@ -41,42 +41,42 @@ btnVoltarLista.addEventListener('click', function () {
 
 var visible = localStorage.getItem('visible');
 
-    // Se houver um estado armazenado, aplicá-lo
-    if (visible === 'container-adm-form') {
-      containerAdm.classList.add('hidden');
-      containerForm.classList.remove('hidden');
-      containerLista.classList.add('hidden');
-    } else if (visible === 'container-lista') {
-      containerAdm.classList.add('hidden');
-      containerForm.classList.add('hidden');
-      containerLista.classList.remove('hidden');
-    }
+// Se houver um estado armazenado, aplicá-lo
+if (visible === 'container-adm-form') {
+    containerAdm.classList.add('hidden');
+    containerForm.classList.remove('hidden');
+    containerLista.classList.add('hidden');
+} else if (visible === 'container-lista') {
+    containerAdm.classList.add('hidden');
+    containerForm.classList.add('hidden');
+    containerLista.classList.remove('hidden');
+}
 
 
 
 /* Área de cadastro de Clientes */
-class Cliente{
-    constructor(){
+class Cliente {
+    constructor() {
         this.arrayClientes = [];
-        
+
     }
 
-    salvar(){
+    salvar() {
         let cliente = this.lerDados();
 
-        if(this.validaCampos(cliente)){
-           this.adicionar(cliente);
+        if (this.validaCampos(cliente)) {
+            this.adicionar(cliente);
         }
         this.listaTabela();
         this.limpar();
-        alert('Cliente salvo com sucesso!')
-        
+
+
     }
 
-    listaTabela(){
+    listaTabela() {
         let tbody = document.getElementById('tbody');
         tbody.innerText = "";
-        for(let i=0; i<this.arrayClientes.length; i++){
+        for (let i = 0; i < this.arrayClientes.length; i++) {
             let tr = tbody.insertRow();
 
             let td_nome = tr.insertCell();
@@ -87,24 +87,25 @@ class Cliente{
             td_nome.innerText = this.arrayClientes[i].nomeCliente;
             td_email.innerText = this.arrayClientes[i].emailCliente;
             td_cel.innerText = this.arrayClientes[i].celCliente;
-            
+
             let imgEdit = document.createElement('img');
             imgEdit.src = 'imagens/icones/editar.png';
 
             let imgDel = document.createElement('img');
             imgDel.src = 'imagens/icones/lixo.png';
+            imgDel.setAttribute("onclick", "cliente.excluir(" + this.arrayClientes[i].nomeCliente + ")");
 
             td_editar.appendChild(imgEdit);
             td_editar.appendChild(imgDel);
-            
+
         }
     }
 
-    adicionar(cliente){
+    adicionar(cliente) {
         this.arrayClientes.push(cliente);
     }
 
-    lerDados(){
+    lerDados() {
         let cliente = {}
 
         cliente.nomeCliente = document.getElementById('txtnome').value;
@@ -114,20 +115,18 @@ class Cliente{
         return cliente;
     }
 
-    excluir(){
-        alert("Cliente Excluido!")
-    }
 
-    validaCampos(cliente){
+
+    validaCampos(cliente) {
         let msg = "";
 
-        if(cliente.nomeCliente ==""){
+        if (cliente.nomeCliente == "") {
             msg += "- Informe seu Nome completo \n"
         }
-        if(cliente.emailCliente ==""){
+        if (cliente.emailCliente == "") {
             msg += "- Informe seu E-mail \n"
         }
-        if(msg!=""){
+        if (msg != "") {
             alert(msg)
             return false
         }
@@ -135,12 +134,23 @@ class Cliente{
 
     }
 
-    limpar(){
-        document.getElementById('txtnome').value ='';
-        document.getElementById('email').value ='';
+    limpar() {
+        document.getElementById('txtnome').value = '';
+        document.getElementById('email').value = '';
         document.getElementById('txtcel').value = '';
     }
-}
 
+    excluir(nomeCliente) {
+        let indiceExclusao = this.arrayClientes.findIndex(cliente => cliente.nomeCliente === nomeCliente);
+
+        if (indiceExclusao !== -1) {
+            // Remover o cliente do array
+            this.arrayClientes.splice(indiceExclusao, 1);
+            this.listaTabela();
+        } else {
+            alert("Cliente não encontrado para exclusão.");
+        }
+    }
+}
 var cliente = new Cliente();
 

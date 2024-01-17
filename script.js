@@ -164,7 +164,7 @@ class Cliente {
     }
 
     excluir(id) {
-
+        
         if (confirm('Deseja realmente deletar o Cliente do ID ' + id)) {
 
             let tbody = document.getElementById('tbody');

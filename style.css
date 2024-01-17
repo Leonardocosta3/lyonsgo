@@ -90,7 +90,6 @@ body {
    
 }
 
-
 .exemplo{
     display: flex;
     flex-direction: column;
@@ -164,4 +163,7 @@ body {
 
 }
 
-/*Administração*/
+.hidden {
+    display: none;
+}
+

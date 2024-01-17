@@ -6,11 +6,6 @@
     <title>Document</title>
     <script src="scriptLogin.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
     
 </head>
 <body>
@@ -21,8 +16,8 @@
                 <div class="form-header">Login</div>
                 <div class="input-group">
                     <div class="input-box">
-                        <input id="email" type="email" placeholder="E-mail" >
-                        <input id="password" type="passwordtext" placeholder="Senha" >
+                        <input id="email" type="email" placeholder="E-mail" required>
+                        <input id="password" type="passwordtext" placeholder="Senha" required>
                     </div>
                     <div class="button-login">
                         <input id="login-btn-entrar" class="button-entrar" type="button" value="Entrar">
@@ -56,7 +51,7 @@
                          </div>
                     </div>
                         <input id="button-salvar" class="button-salvar" type="button" value="Salvar">
-                        <a class="semsenha"><label id="login-semsenha2"  class="semsenha">Esqueceu a senha?</label></a>
+                        <a class="semsenha"><label id="pa-semsenha"  class="semsenha">Esqueceu a senha?</label></a>
                 </div>
             </form>
         </div>    

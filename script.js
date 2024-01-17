@@ -52,8 +52,6 @@ if (visible === 'container-adm-form') {
     containerLista.classList.remove('hidden');
 }
 
-
-
 /* Área de cadastro de Clientes */
 class Cliente {
     constructor() {

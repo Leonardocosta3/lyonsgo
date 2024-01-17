@@ -224,7 +224,6 @@ body {
     flex-direction: column;
 }
 
-.rodape-form {}
 
 .form-btn-salvar {
     width: 100px;
@@ -236,7 +235,9 @@ body {
     color: white;
     padding: 6px 25px;
     margin-top: 20px;
+    
 }
+
 
 .form-btn-voltar:hover {
     cursor: pointer;

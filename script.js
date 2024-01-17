@@ -59,6 +59,7 @@ class Cliente {
     constructor() {
         this.id = 1;
         this.arrayClientes = [];
+        this.editId = null;
 
     }
 
@@ -66,12 +67,16 @@ class Cliente {
         let cliente = this.lerDados();
 
         if (this.validaCampos(cliente)) {
-            this.adicionar(cliente);
+            if (this.editId == null) {
+                this.adicionar(cliente);
+            } else {
+                this.atualizar(this.editId, cliente);
+            }
+
         }
+
         this.listaTabela();
         this.limpar();
-
-
     }
 
     listaTabela() {
@@ -95,10 +100,11 @@ class Cliente {
 
             let imgEdit = document.createElement('img');
             imgEdit.src = 'imagens/icones/editar.png';
+            imgEdit.setAttribute("onclick", "cliente.editar(" + JSON.stringify(this.arrayClientes[i]) + ")");
 
             let imgDel = document.createElement('img');
             imgDel.src = 'imagens/icones/lixo.png';
-            imgDel.setAttribute("onclick", "cliente.excluir("+ this.arrayClientes[i].id +")");
+            imgDel.setAttribute("onclick", "cliente.excluir(" + this.arrayClientes[i].id + ")");
 
             td_editar.appendChild(imgEdit);
             td_editar.appendChild(imgDel);
@@ -108,8 +114,19 @@ class Cliente {
     }
 
     adicionar(cliente) {
+        cliente.celCliente = parseFloat(cliente.celCliente);
         this.arrayClientes.push(cliente);
         this.id++;
+    }
+
+    atualizar(id, cliente) {
+        for (var i = 0; i < this.arrayClientes.length; i++) {
+            if (this.arrayClientes[i].id == id) {
+                this.arrayClientes[i].nomeCliente = cliente.nomeCliente;
+                this.arrayClientes[i].emailCliente = cliente.emailCliente;
+                this.arrayClientes[i].celCliente = cliente.celCliente;
+            }
+        }
     }
 
     lerDados() {
@@ -122,8 +139,6 @@ class Cliente {
 
         return cliente;
     }
-
-
 
     validaCampos(cliente) {
         let msg = "";
@@ -139,26 +154,47 @@ class Cliente {
             return false
         }
         return true;
-
     }
 
     limpar() {
         document.getElementById('txtnome').value = '';
         document.getElementById('email').value = '';
         document.getElementById('txtcel').value = '';
+
+        document.getElementById('btn-salvar').value = 'Salvar';
+        this.editId = null;
     }
 
     excluir(id) {
-        let tbody = document.getElementById('tbody');
 
-        for(let i = 0; i<this.arrayClientes.length; i++){
-            if(this.arrayClientes[i].id == id){
-                this.arrayClientes.splice(i, 1);
-                tbody.deleteRow(i);
+        if (confirm('Deseja realmente deletar o Cliente do ID ' + id)) {
+
+            let tbody = document.getElementById('tbody');
+
+            for (let i = 0; i < this.arrayClientes.length; i++) {
+                if (this.arrayClientes[i].id == id) {
+                    this.arrayClientes.splice(i, 1);
+                    tbody.deleteRow(i);
+                }
             }
         }
     }
-    
+
+    editar(dados) {
+        this.editId = dados.id;
+
+        document.getElementById('btn-salvar').value = 'Editar';
+
+        containerAdm.classList.add('hidden');
+        containerForm.classList.remove('hidden');
+        containerLista.classList.add('hidden');
+
+        document.getElementById('txtnome').value = dados.nomeCliente;
+        document.getElementById('email').value = dados.emailCliente;
+        document.getElementById('txtcel').value = dados.celCliente;
+
+    }
+
 }
 var cliente = new Cliente();
 

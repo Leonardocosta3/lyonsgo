@@ -338,3 +338,7 @@ div#container-table {
 .hidden {
     display: none;
 }
+
+.center{
+    text-align: center;
+}

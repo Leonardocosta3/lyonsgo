@@ -57,6 +57,7 @@ if (visible === 'container-adm-form') {
 /* Área de cadastro de Clientes */
 class Cliente {
     constructor() {
+        this.id = 1;
         this.arrayClientes = [];
 
     }
@@ -79,35 +80,42 @@ class Cliente {
         for (let i = 0; i < this.arrayClientes.length; i++) {
             let tr = tbody.insertRow();
 
+            let td_id = tr.insertCell();
             let td_nome = tr.insertCell();
             let td_email = tr.insertCell();
             let td_cel = tr.insertCell();
             let td_editar = tr.insertCell();
 
+            td_id.innerText = this.arrayClientes[i].id;
             td_nome.innerText = this.arrayClientes[i].nomeCliente;
             td_email.innerText = this.arrayClientes[i].emailCliente;
             td_cel.innerText = this.arrayClientes[i].celCliente;
+
+            td_id.classList.add('center')
 
             let imgEdit = document.createElement('img');
             imgEdit.src = 'imagens/icones/editar.png';
 
             let imgDel = document.createElement('img');
             imgDel.src = 'imagens/icones/lixo.png';
-            imgDel.setAttribute("onclick", "cliente.excluir(" + this.arrayClientes[i].nomeCliente + ")");
+            imgDel.setAttribute("onclick", "cliente.excluir("+ this.arrayClientes[i].id +")");
 
             td_editar.appendChild(imgEdit);
             td_editar.appendChild(imgDel);
 
+            console.log(this.arrayClientes);
         }
     }
 
     adicionar(cliente) {
         this.arrayClientes.push(cliente);
+        this.id++;
     }
 
     lerDados() {
         let cliente = {}
 
+        cliente.id = this.id;
         cliente.nomeCliente = document.getElementById('txtnome').value;
         cliente.emailCliente = document.getElementById('email').value;
         cliente.celCliente = document.getElementById('txtcel').value;
@@ -140,17 +148,17 @@ class Cliente {
         document.getElementById('txtcel').value = '';
     }
 
-    excluir(nomeCliente) {
-        let indiceExclusao = this.arrayClientes.findIndex(cliente => cliente.nomeCliente === nomeCliente);
+    excluir(id) {
+        let tbody = document.getElementById('tbody');
 
-        if (indiceExclusao !== -1) {
-            // Remover o cliente do array
-            this.arrayClientes.splice(indiceExclusao, 1);
-            this.listaTabela();
-        } else {
-            alert("Cliente não encontrado para exclusão.");
+        for(let i = 0; i<this.arrayClientes.length; i++){
+            if(this.arrayClientes[i].id == id){
+                this.arrayClientes.splice(i, 1);
+                tbody.deleteRow(i);
+            }
         }
     }
+    
 }
 var cliente = new Cliente();
 

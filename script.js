@@ -10,24 +10,6 @@ var btnLista = document.getElementById('btn-lista');
 var btnVoltarForm = document.getElementById('form-btn-voltar');
 var btnVoltarLista = document.getElementById('lista-btn-voltar');
 
-const visible = localStorage.getItem('visible');
-
-if (visible === 'container-adm-form') {
-    containerAdm.classList.add('hidden');
-    containerForm.classList.remove('hidden');
-    containerLista.classList.add('hidden');
-} else if (visible === 'container-lista') {
-    containerAdm.classList.add('hidden');
-    containerForm.classList.add('hidden');
-    containerLista.classList.remove('hidden');
-} else {
-    containerAdm.classList.remove('hidden');
-    containerForm.classList.add('hidden');
-    containerLista.classList.add('hidden');
-}
-
-
-
 btnCadastro.addEventListener('click', function () {
     containerAdm.classList.add('hidden');
     containerForm.classList.remove('hidden');
@@ -56,6 +38,7 @@ btnVoltarLista.addEventListener('click', function () {
     containerLista.classList.add('hidden');
     localStorage.setItem('visible', 'container-adm');
 });
+
 
 /* Área de cadastro de Clientes */
 class Cliente {

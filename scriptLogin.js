@@ -40,6 +40,36 @@ btnRs.addEventListener('click', function () {
 
 });
 
+const adms = [
+    {
+        loginAdm: 'admin',
+        senhaAdm: 'admin'
+    },
+    {
+        loginAdm: 'admin2',
+        senhaAdm: 'admin2'
+    },
+    {
+        loginAdm: 'admin3',
+        senhaAdm: 'admin4'
+    }
+];
+
+const users = [
+    {
+        loginUser: 'user',
+        senhaUser: 'user'
+    },
+    {
+        loginUser: 'user2',
+        senhaUser: 'user2'
+    },
+    {
+        loginUser: 'user3',
+        senhaUser: 'user3'
+    }
+
+];
 
 class Clientes {
     constructor() {
@@ -51,8 +81,10 @@ class Clientes {
     entrar() {
        let clientes = this.lerDados();
 
-       if(this,this.validaCampos(clientes)){
-            alert('salvar')
+       if(this.validaCampos(clientes)){
+          if(this.validaUser() == true){
+            alert('Usuário não encontrado');
+          }  
        }
 
        console.log(clientes);
@@ -62,10 +94,10 @@ class Clientes {
         let msg = "";
 
         if (clientes.login == "") {
-            msg += "- Informe seu Nome completo \n"
+            msg += "- Informe seu Email \n"
         }
         if (clientes.senha == "") {
-            msg += "- Informe seu E-mail \n"
+            msg += "- Informe sua Senha \n"
         }
         if (msg != "") {
             alert(msg)
@@ -73,7 +105,7 @@ class Clientes {
         }
         return true;
     }
-    adicionar() {
+    buscar() {
 
     }
     lerDados() {
@@ -94,13 +126,22 @@ class Clientes {
 
     }
     validaUser() {
+        let emailUser = document.getElementById('email').value;
+        let senhaUser = document.getElementById('password').value;
 
+        for(let i in users){
+            if(emailUser == users[i].loginUser && senhaUser == users[i].senhaUser){
+                return true;
+            }else{
+                return false;
+            }
+        }
     }
     validaAdm() {
 
     }
     semSenha() {
-        alert('sem senha')
+        
     }
 }
 var clientes = new Clientes();

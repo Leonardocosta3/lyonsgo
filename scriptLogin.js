@@ -10,97 +10,97 @@ var btnSemsenhalo = document.getElementById('login-semsenha');
 var btnSalvar = document.getElementById('button-salvar');
 var btnSemsenhapa = document.getElementById('pa-semsenha');
 
-var btnRs= document.getElementById('recuperar-senha');
+var btnRs = document.getElementById('recuperar-senha');
 
-btnSemsenhalo.addEventListener('click', function(){
+btnSemsenhalo.addEventListener('click', function () {
     containerLogin.classList.add('hidden');
     containerPa.classList.add('hidden');
     containerRs.classList.remove('hidden');
 
 });
 
-btnSalvar.addEventListener('click', function(){
+btnSalvar.addEventListener('click', function () {
     containerLogin.classList.remove('hidden');
     containerPa.classList.add('hidden');
     containerRs.classList.add('hidden');
 
 });
 
-btnSemsenhapa.addEventListener('click', function(){
+btnSemsenhapa.addEventListener('click', function () {
     containerLogin.classList.add('hidden');
     containerPa.classList.add('hidden');
     containerRs.classList.remove('hidden');
 
 });
 
-btnRs.addEventListener('click', function(){
+btnRs.addEventListener('click', function () {
     containerLogin.classList.remove('hidden');
     containerPa.classList.add('hidden');
     containerRs.classList.add('hidden');
 
 });
 
-const usuarios = [
-    {
-        login: 'user1',
-        senha: 'senha1'
-    },
-    {
-        login: 'user2',
-        senha: 'senha2'
-    },
-    {
-        login: 'user3',
-        senha: 'senha3'
-    }
-]
 
-class Clientes{
-    constructor(){
+class Clientes {
+    constructor() {
+        this.id = 1;
         this.arrayClientes = [];
+
     }
 
-     entrar(){
-        var login = document.getElementById('email').value;
-        var senha = document.getElementById('password').value;
-        var validaUser = false;
-        var validaAdm = false;
-    
-        for(var i in usuarios){
-            if(login == usuarios[i].login && senha == usuarios[i].senha){
-                validaUser = true;
-                break
-            }else if(login == 'admin' && senha == 'admin'){
-                validaAdm = true;
-            }
+    entrar() {
+       let clientes = this.lerDados();
+
+       if(this,this.validaCampos(clientes)){
+            alert('salvar')
+       }
+
+       console.log(clientes);
+    }
+
+    validaCampos(clientes) {
+        let msg = "";
+
+        if (clientes.login == "") {
+            msg += "- Informe seu Nome completo \n"
         }
-        if(validaUser == true){
-            containerLogin.classList.add('hidden');
-            containerPa.classList.remove('hidden');
-            containerRs.classList.add('hidden'); 
-        }else if(validaAdm == true){
-            location.href = 'adm.html';
-        }else{
-            alert('Usuario não encontrado!');
+        if (clientes.senha == "") {
+            msg += "- Informe seu E-mail \n"
         }
-    
+        if (msg != "") {
+            alert(msg)
+            return false
+        }
+        return true;
     }
-
-    validaLogin(){
-
-    }
-    adicionar(){
+    adicionar() {
 
     }
     lerDados() {
-        
+        let clientes = {}
+
+        clientes.id = this.id;
+        clientes.login = document.getElementById('email').value;
+        clientes.senha = document.getElementById('password').value;
+
+
+        return clientes;
     }
+
     novaSenha() {
 
     }
-    salvar(){
+    salvar() {
 
     }
+    validaUser() {
 
+    }
+    validaAdm() {
+
+    }
+    semSenha() {
+        alert('sem senha')
+    }
 }
 var clientes = new Clientes();

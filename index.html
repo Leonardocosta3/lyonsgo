@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyonsgo</title>
     <script src="scriptLogin.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
+
 <body>
     <div id="container-login" class="container-login">
         <img id="logo-preta" src="imagens/logo-preta.png" alt="logo">
@@ -16,17 +18,19 @@
                 <div class="form-header">Login</div>
                 <div class="input-group">
                     <div class="input-box">
-                        <input id="email" type="email" placeholder="E-mail" required>
-                        <input id="password" type="password" placeholder="Senha" required>
+                        <input id="email" class="email" type="email" placeholder="E-mail">
+                        <input id="password" class="password" type="password" placeholder="Senha">
                     </div>
                     <div class="button-login">
-                        <input id="login-btn-entrar" class="button-entrar" type="submit" value="Entrar" onclick="clientes.entrar()">
-                        <a class="semsenha"><label id="login-semsenha" class="semsenha" for="semsenha">Esqueceu a senha?</label></a>
+                        <input id="login-btn-entrar" class="button-entrar" type="submit" value="Entrar"
+                            onclick="clientes.entrar()">
+                        <a class="semsenha"><label id="login-semsenha" class="semsenha" for="semsenha" onclick="clientes.semSenha()">Esqueceu a
+                                senha?</label></a>
                     </div>
                 </div>
-            </form>      
+            </form>
         </div>
-           
+
     </div>
     <div id="container-pa" class="container-login hidden">
         <img id="logo-preta" src="imagens/logo-preta.png" alt="logo">
@@ -40,33 +44,34 @@
                     </div>
                     <div class="input-senha">
                         <p class="text-pa">Digite sua nova senha</p>
-                        <input type="passwordtext" name="novasenha" id="password" placeholder="Nova Senha">
-                        <input type="passwordtext" name="novasenha" id="password" placeholder="Repita Nova Senha">
+                        <input type="password" class="password" id="newpassword" placeholder="Nova Senha">
+                        <input type="password" class="password" id="newpassword2" placeholder="Repita Nova Senha">
                     </div>
                     <div class="dominio">
-                         <p class="text-pa">Escolha seu domínio</p>
-                         <div class="dom">
-                             <label>https://lyonsgo.com.br/</label>
-                             <input type="text" name="text" id="input-pa">
-                         </div>
+                        <p class="text-pa">Escolha seu domínio</p>
+                        <div class="dom">
+                            <label>https://lyonsgo.com.br/</label>
+                            <input type="text" name="text" id="input-pa">
+                        </div>
                     </div>
-                        <input id="button-salvar" class="button-salvar" type="button" value="Salvar">
-                        <a class="semsenha"><label id="pa-semsenha"  class="semsenha">Esqueceu a senha?</label></a>
+                    <input id="button-salvar" class="button-salvar" type="button" value="Salvar">
+                    <a class="semsenha"><label id="pa-semsenha" class="semsenha" onclick="clientes.semSenha()">Esqueceu a senha?</label></a>
                 </div>
             </form>
-        </div>    
+        </div>
     </div>
     <div id="container-rs" class="container-login hidden">
         <div class="form">
             <form action="#">
                 <div class="form-header">Recuperar Senha</div>
                 <div class="input-group-rs">
-                    <input type="email" name="email" id="email-rs" placeholder="E-mail cadastrado" >
+                    <input type="email" name="email" id="email-rs" placeholder="E-mail cadastrado">
                     <button id="recuperar-senha" class="button-entrar" type="button-rs">Recuperar senha</button>
                 </div>
-                
+
             </form>
         </div>
     </div>
 </body>
+
 </html>

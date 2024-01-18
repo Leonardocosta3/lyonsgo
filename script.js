@@ -6,6 +6,7 @@ var containerLista = document.getElementById('container-lista');
 
 var btnCadastro = document.getElementById('btn-cadastro');
 var btnLista = document.getElementById('btn-lista');
+var btnSair = document.getElementById('btn-adm-sair');
 
 var btnVoltarForm = document.getElementById('form-btn-voltar');
 var btnVoltarLista = document.getElementById('lista-btn-voltar');
@@ -14,7 +15,6 @@ btnCadastro.addEventListener('click', function () {
     containerAdm.classList.add('hidden');
     containerForm.classList.remove('hidden');
     containerLista.classList.add('hidden');
-    localStorage.setItem('visible', 'container-adm-form');
 
 });
 
@@ -22,21 +22,25 @@ btnLista.addEventListener('click', function () {
     containerAdm.classList.add('hidden');
     containerForm.classList.add('hidden');
     containerLista.classList.remove('hidden');
-    localStorage.setItem('visible', 'container-lista');
+
 });
+
+btnSair.addEventListener('click', function () {
+    location.href = 'index.html';   
+})
 
 btnVoltarForm.addEventListener('click', function () {
     containerAdm.classList.remove('hidden');
     containerForm.classList.add('hidden');
     containerLista.classList.add('hidden');
-    localStorage.setItem('visible', 'container-adm');
+
 });
 
 btnVoltarLista.addEventListener('click', function () {
     containerAdm.classList.remove('hidden');
     containerForm.classList.add('hidden');
     containerLista.classList.add('hidden');
-    localStorage.setItem('visible', 'container-adm');
+
 });
 
 
@@ -58,7 +62,6 @@ class Cliente {
             } else {
                 this.atualizar(this.editId, cliente);
             }
-
         }
 
         this.listaTabela();
@@ -113,6 +116,9 @@ class Cliente {
                 this.arrayClientes[i].celCliente = cliente.celCliente;
             }
         }
+        containerAdm.classList.add('hidden');
+        containerForm.classList.add('hidden');
+        containerLista.classList.remove('hidden');
     }
 
     lerDados() {
@@ -146,8 +152,6 @@ class Cliente {
         document.getElementById('txtnome').value = '';
         document.getElementById('email').value = '';
         document.getElementById('txtcel').value = '';
-
-        document.getElementById('btn-salvar').value = 'Salvar';
         this.editId = null;
     }
 
@@ -168,8 +172,6 @@ class Cliente {
 
     editar(dados) {
         this.editId = dados.id;
-
-        document.getElementById('btn-salvar').value = 'Editar';
 
         containerAdm.classList.add('hidden');
         containerForm.classList.remove('hidden');

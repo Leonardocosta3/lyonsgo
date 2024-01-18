@@ -12,13 +12,6 @@ var btnSemsenhapa = document.getElementById('pa-semsenha');
 
 var btnRs= document.getElementById('recuperar-senha');
 
-btnEntrar.addEventListener('click', function(){ 
-    containerLogin.classList.add('hidden');
-    containerPa.classList.remove('hidden');
-    containerRs.classList.add('hidden');
-
-});
-
 btnSemsenhalo.addEventListener('click', function(){
     containerLogin.classList.add('hidden');
     containerPa.classList.add('hidden');
@@ -47,13 +40,11 @@ btnRs.addEventListener('click', function(){
 
 });
 
-
 function logar(){
     var login = document.getElementById('email').value;
     var senha = document.getElementById('password').value;
 
     if(login == 'admin' && senha == 'admin'){
-        alert('Sucesso!');
         location.href = 'adm.html';   
     }else{
         alert('Usuário ou senha estão incoretos!');

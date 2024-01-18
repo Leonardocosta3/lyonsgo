@@ -31,7 +31,6 @@ body {
     width: 100px;
     margin-left: 5%;
     margin-right: 4%;
-
 }
 
 .adm-label {
@@ -72,8 +71,6 @@ body {
     text-align: left;
     align-items: center;
     margin: 20px;
-
-
 }
 
 .cadastro-label {
@@ -84,13 +81,16 @@ body {
     width: 50px;
     height: 45px;
     margin-left: 15px;
-
 }
 
-.btn-cadastro:hover,
+.btn-cadastro:hover {
+    box-shadow: 0px 0px 5px 0px rgb(19, 204, 204);
+    cursor: pointer;
+}
 .cadastro-label:hover {
     cursor: pointer;
 }
+
 
 .lista {
     background-color: white;
@@ -104,14 +104,10 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20px;
-
-
-
 }
 
 .lista-label {
     font-size: 1.3em;
-
 }
 
 .lista-icon {
@@ -119,11 +115,13 @@ body {
     margin-left: 56px;
 }
 
-.lista:hover,
+.lista:hover:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgb(19, 204, 204);
+}
 .lista-label:hover {
     cursor: pointer;
 }
-
 /*Pagina de cadastro de novo usuário*/
 
 #container-adm-form {
@@ -131,9 +129,7 @@ body {
     margin-top: 80px;
     flex-direction: column;
     padding-left: 10%;
-
 }
-
 
 .title-form {
     display: flex;
@@ -175,6 +171,10 @@ body {
     margin-top: 5px;
     margin-bottom: 0px;
     width: 90%;
+}
+.input-email-form:hover,.input-nome-form:hover,.input-tel-form:hover{
+    box-shadow: 0px 0px 5px 0px rgb(19, 204, 204);
+    
 }
 
 .adm-form-group {
@@ -234,8 +234,7 @@ body {
     background-color: rgb(11, 170, 209);
     color: white;
     padding: 6px 25px;
-    margin-top: 20px;
-    
+    margin-top: 20px;  
 }
 
 
@@ -244,7 +243,6 @@ body {
     background-color: rgb(11, 170, 209);
     transition: 0.1s;
     padding: 7px 26px;
-
 }
 
 .form-btn-salvar:hover {
@@ -266,7 +264,6 @@ body {
     display: flex;
     flex-direction: row;
     margin-bottom: 40px;
-
 }
 
 .label-lista {
@@ -324,7 +321,6 @@ table td img {
     margin: 0;
     padding-left: 15px;
     text-align: center;
-
 }
 
 .edit {

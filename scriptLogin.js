@@ -99,14 +99,8 @@ class Clientes{
 
     }
     salvar(){
-        
+
     }
-
-
-
-
-
-
 
 }
 var clientes = new Clientes();

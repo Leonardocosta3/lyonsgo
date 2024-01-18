@@ -40,14 +40,73 @@ btnRs.addEventListener('click', function(){
 
 });
 
-function logar(){
-    var login = document.getElementById('email').value;
-    var senha = document.getElementById('password').value;
+const usuarios = [
+    {
+        login: 'user1',
+        senha: 'senha1'
+    },
+    {
+        login: 'user2',
+        senha: 'senha2'
+    },
+    {
+        login: 'user3',
+        senha: 'senha3'
+    }
+]
 
-    if(login == 'admin' && senha == 'admin'){
-        location.href = 'adm.html';   
-    }else{
-        alert('Usuário ou senha estão incoretos!');
+class Clientes{
+    constructor(){
+        this.arrayClientes = [];
     }
 
+     entrar(){
+        var login = document.getElementById('email').value;
+        var senha = document.getElementById('password').value;
+        var validaUser = false;
+        var validaAdm = false;
+    
+        for(var i in usuarios){
+            if(login == usuarios[i].login && senha == usuarios[i].senha){
+                validaUser = true;
+                break
+            }else if(login == 'admin' && senha == 'admin'){
+                validaAdm = true;
+            }
+        }
+        if(validaUser == true){
+            containerLogin.classList.add('hidden');
+            containerPa.classList.remove('hidden');
+            containerRs.classList.add('hidden'); 
+        }else if(validaAdm == true){
+            location.href = 'adm.html';
+        }else{
+            alert('Usuario não encontrado!');
+        }
+    
+    }
+
+    validaLogin(){
+
+    }
+    adicionar(){
+
+    }
+    lerDados() {
+        
+    }
+    novaSenha() {
+
+    }
+    salvar(){
+        
+    }
+
+
+
+
+
+
+
 }
+var clientes = new Clientes();

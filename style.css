@@ -20,11 +20,14 @@ body {
     background-color: rgba(194, 186, 186, 0.247);
 }
 /*Tela de Login*/
-.container-login {
+#container-login {
     width: 400px;
     height: 100%vh;
     text-align: center;
     
+}
+.container-login{
+    display:block;
 }
 
 .form{
@@ -82,12 +85,10 @@ body {
 
 /*Primeiro Acesso*/
 
-.container-pa {
+#container-pa {
     width: 400px;
     height: 100%vh;
-    text-align: center;
-    display: none;
-   
+    text-align: center;   
 }
 
 .exemplo{
@@ -125,7 +126,8 @@ body {
     font-weight: bold;
 }
 .dom input{
-    padding-left:19px
+    padding-left:1px;
+    padding-right: 5px;
 }
 .button-salvar{
     margin-right:90px;
@@ -141,12 +143,12 @@ body {
 }
 
 /*Recuperar senha*/
-.container-rs {
+#container-rs {
     width: 400px;
     height: 100%vh;
     text-align: center;
-    display: none;
 }
+
 .input-group-rs{
     display:flex;
     flex-direction: column;

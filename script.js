@@ -10,10 +10,28 @@ var btnLista = document.getElementById('btn-lista');
 var btnVoltarForm = document.getElementById('form-btn-voltar');
 var btnVoltarLista = document.getElementById('lista-btn-voltar');
 
+const visible = localStorage.getItem('visible');
+
+if (visible === 'container-adm-form') {
+    containerAdm.classList.add('hidden');
+    containerForm.classList.remove('hidden');
+    containerLista.classList.add('hidden');
+} else if (visible === 'container-lista') {
+    containerAdm.classList.add('hidden');
+    containerForm.classList.add('hidden');
+    containerLista.classList.remove('hidden');
+} else {
+    containerAdm.classList.remove('hidden');
+    containerForm.classList.add('hidden');
+    containerLista.classList.add('hidden');
+}
+
+
+
 btnCadastro.addEventListener('click', function () {
     containerAdm.classList.add('hidden');
-    containerLista.classList.add('hidden');
     containerForm.classList.remove('hidden');
+    containerLista.classList.add('hidden');
     localStorage.setItem('visible', 'container-adm-form');
 
 });
@@ -38,19 +56,6 @@ btnVoltarLista.addEventListener('click', function () {
     containerLista.classList.add('hidden');
     localStorage.setItem('visible', 'container-adm');
 });
-
-var visible = localStorage.getItem('visible');
-
-// Se houver um estado armazenado, aplicá-lo
-if (visible === 'container-adm-form') {
-    containerAdm.classList.add('hidden');
-    containerForm.classList.remove('hidden');
-    containerLista.classList.add('hidden');
-} else if (visible === 'container-lista') {
-    containerAdm.classList.add('hidden');
-    containerForm.classList.add('hidden');
-    containerLista.classList.remove('hidden');
-}
 
 /* Área de cadastro de Clientes */
 class Cliente {
@@ -164,7 +169,7 @@ class Cliente {
     }
 
     excluir(id) {
-        
+
         if (confirm('Deseja realmente deletar o Cliente do ID ' + id)) {
 
             let tbody = document.getElementById('tbody');

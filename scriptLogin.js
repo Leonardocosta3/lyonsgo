@@ -79,7 +79,9 @@ class Clientes {
         let clientes = this.lerDados();
         
         if (this.validaCampos(clientes)) {
-            if (this.validaUser() === true) {
+           if(this.comsenha()) {
+            alert('senha');
+           } else if (this.validaUser() === true) {
 
                 containerLogin.classList.add('hidden');
                 containerPa.classList.remove('hidden');
@@ -87,18 +89,22 @@ class Clientes {
 
             } else if (this.validaAdm() === true) {
                 location.href = 'adm.html';
-            }else{
+            } else{
                 alert('Senha Inválida!')
             }
         }
     }
+    
     salvar() {
         if(this.validaCampoSenha()){
-            this.novaSenha();
+            if(this.novaSenha()){
+               
+            }
+            containerLogin.classList.remove('hidden');
+            containerPa.classList.add('hidden');
+            containerRs.classList.add('hidden');
         }
-        containerLogin.classList.remove('hidden');
-        containerPa.classList.add('hidden');
-        containerRs.classList.add('hidden');
+        
     }
 
 
@@ -159,10 +165,10 @@ class Clientes {
         let msg = "";
 
         if (novaSenha == "") {
-            msg += "- Informe uma Nova Senha \n"
+            msg += "- Informe uma nova Senha \n"
         }
         if (confirmaSenha == "") {
-            msg += "- Informe uma Senha Senha \n"
+            msg += "- Confirme sua nova Senha \n"
         }
         if (msg != "") {
             alert(msg)
@@ -190,7 +196,6 @@ class Clientes {
         var nomeAdm = document.getElementById('email').value;
         var senhaAdm = document.getElementById('password').value;
 
-
         for (let i = 0; i < adms.length; i++) {
             const admAtual = adms[i];
 
@@ -205,7 +210,23 @@ class Clientes {
 
     }
     comsenha(){
+        var novaSenha = document.getElementById("newpassword").value;
+        var nomeUsuario = document.getElementById('email').value;
+        var confirmaNova = document.getElementById('password').value;
         
+        for (let i = 0; i < users.length; i++) {
+            const usuarioAtual = users[i];
+
+            if (novaSenha == '') {
+                return false;
+            }else if (confirmaNova != novaSenha){
+                alert('Incorreta')
+                return false;
+            }else if (usuarioAtual.loginUser === nomeUsuario && usuarioAtual.senhaUser === novaSenha){
+                return true;
+            }
+        }
+
     }
 }
 var clientes = new Clientes();

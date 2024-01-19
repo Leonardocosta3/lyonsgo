@@ -98,11 +98,11 @@ class Clientes {
     salvar() {
         if(this.validaCampoSenha()){
             if(this.novaSenha()){
-               
-            }
             containerLogin.classList.remove('hidden');
             containerPa.classList.add('hidden');
             containerRs.classList.add('hidden');
+            }
+            
         }
         
     }
@@ -143,19 +143,15 @@ class Clientes {
 
         if (novaSenha !== confirmaSenha) {
             alert("As senhas não coincidem. Por favor, confirme a senha corretamente.");
-            return;
+            return false;
         }
 
-        // Encontrar o índice do usuário no array
         const index = users.findIndex(loginUser => loginUser.loginUser === nomeUsuario);
 
-        // Verificar se o usuário foi encontrado
         if (index !== -1) {
-            // Atualizar a senha
             users[index].senhaUser = novaSenha;
             alert("Senha atualizada com sucesso!");
-        } else {
-            alert("Usuário não encontrado!");
+            return true;
         }
     }
     validaCampoSenha(){

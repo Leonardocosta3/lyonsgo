@@ -80,9 +80,9 @@ class Clientes {
         
         if (this.validaCampos(clientes)) {
            if(this.comsenha()) {
-            alert('senha');
+            location.href = 'editar.html';
            } else if (this.validaUser() === true) {
-
+                this.limparCampos();
                 containerLogin.classList.add('hidden');
                 containerPa.classList.remove('hidden');
                 containerRs.classList.add('hidden');
@@ -220,13 +220,16 @@ class Clientes {
             if (novaSenha == '') {
                 return false;
             }else if (confirmaNova != novaSenha){
-                alert('Incorreta')
                 return false;
             }else if (usuarioAtual.loginUser === nomeUsuario && usuarioAtual.senhaUser === novaSenha){
                 return true;
             }
         }
 
+    }
+    limparCampos(){
+        document.getElementById('newpassword').value = '';
+        document.getElementById('newpassword2').value = '';
     }
 }
 var clientes = new Clientes();

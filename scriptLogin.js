@@ -82,12 +82,20 @@ class Clientes {
        let clientes = this.lerDados();
 
        if(this.validaCampos(clientes)){
-          if(this.validaUser() == true){
-            alert('Usuário não encontrado');
-          }  
+           if(this.validaUser() == true){
+
+            containerLogin.classList.add('hidden');
+            containerPa.classList.remove('hidden');
+            containerRs.classList.add('hidden');
+
+           }else if(this.validaAdm() == true){
+            location.href = 'adm.html';
+           }
        }
 
-       console.log(clientes);
+    }
+    salvar() {
+
     }
 
     validaCampos(clientes) {
@@ -115,30 +123,42 @@ class Clientes {
         clientes.login = document.getElementById('email').value;
         clientes.senha = document.getElementById('password').value;
 
-
         return clientes;
     }
 
     novaSenha() {
 
     }
-    salvar() {
-
-    }
-    validaUser() {
-        let emailUser = document.getElementById('email').value;
-        let senhaUser = document.getElementById('password').value;
-
-        for(let i in users){
-            if(emailUser == users[i].loginUser && senhaUser == users[i].senhaUser){
-                return true;
-            }else{
-                return false;
+    
+    validaUser(){
+        var nomeUsuario = document.getElementById('email').value;
+        var senhaUsuario = document.getElementById('password').value;
+        
+        for (let i = 0; i < users.length; i++) {
+            const usuarioAtual = users[i];
+    
+            if (usuarioAtual.loginUser === nomeUsuario &&       usuarioAtual.senhaUser === senhaUsuario) {
+                
+                return true; 
             }
         }
+        return false;
+        
     }
     validaAdm() {
+        var nomeAdm = document.getElementById('email').value;
+        var senhaAdm = document.getElementById('password').value;
 
+        
+        for (let i = 0; i < adms.length; i++) {
+            const admAtual = adms[i];
+    
+            if (admAtual.loginAdm === nomeAdm && admAtual.senhaAdm === senhaAdm) {
+                
+                return true;
+            }
+        }
+        return false;
     }
     semSenha() {
         

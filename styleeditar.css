@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Poppins:wght@200&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+:root {
+    --fonte1: 'Passion One', sans-serif;
+    --fonte2: 'Poppins', sans-serif;
+    --fonte3: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgba(194, 186, 186, 0.329);
+}
+.edit-header {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.edit-logo {
+    width: 100px;
+    margin-left: 5%;
+    margin-right: 4%;
+    
+}
+
+.edit-label {
+    color: white;
+}
+
+.edit-sair {
+    width: 20px;
+    padding-right: 35px;
+    cursor: pointer;
+    
+    
+}
+
+.edit-gera-pdf{
+    background-color: rgb(11, 170, 209);
+    padding: 6px 15px;
+    border-radius:20px; 
+}
+.edit-gera-pdf label{
+    color: black;
+}
+
+.edit-compartilhar{
+    background-color: rgb(11, 170, 209);
+    padding: 6px 15px;
+    border-radius:20px;
+   
+}
+.edit-compartilhar img{
+    width: 15px;
+    padding-right: 9px;
+    
+}
+.edit-compartilhar label{
+    color: black;
+}

@@ -16,21 +16,24 @@
 body {
     background-color: rgba(194, 186, 186, 0.329);
 }
-.edit-header {
-    background-color: black;
+header {
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    padding: 10px;
+    justify-content:space-between;  
+}
+.direita, .esquerda{
+    display: flex;
+    align-items: center;
+    padding:10px;
 }
 
-
 .edit-logo {
-    width: 100px;
-    margin-left: 5%;
-    margin-right: 4%;
-    
+    width: 100px; 
+    margin-left: 40px;
+    margin-right: 50px;  
 }
 
 .edit-label {
@@ -39,32 +42,120 @@ body {
 
 .edit-sair {
     width: 20px;
-    padding-right: 35px;
     cursor: pointer;
-    
-    
+    margin-left: 40px;
+    margin-right: 20px;
 }
 
 .edit-gera-pdf{
+    border: 0px;
     background-color: rgb(11, 170, 209);
-    padding: 6px 15px;
-    border-radius:20px; 
+    border-radius:20px;
+    padding: 7px 15px;
+    
+    
 }
 .edit-gera-pdf label{
     color: black;
 }
 
 .edit-compartilhar{
+    border: 0;
     background-color: rgb(11, 170, 209);
-    padding: 6px 15px;
+    margin-left: 40px;
     border-radius:20px;
-   
+    padding: 7px 15px;
 }
+
 .edit-compartilhar img{
-    width: 15px;
-    padding-right: 9px;
+    width: 13px;
     
 }
 .edit-compartilhar label{
     color: black;
+}
+
+.edit-gera-pdf:hover, .edit-compartilhar:hover, .label-compartilhar:hover, .label-gera-pdf:hover{
+    cursor: pointer;
+}
+.container-edit h1{
+    margin-left: 40px;
+    margin-top:30px;
+}
+.fundo-cores{
+    border: 1px solid black;
+    width: 400px;
+    height:85px;
+    align-items: center;
+    margin-left:40px;
+    padding: 10px;
+    
+}
+.container-botoes{
+    display: flex;
+}
+.container-botoes label{
+    font-weight:bold;
+}
+.botoes-fundo1{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+.botoes-fundo1 button{
+    width: 33px;
+    height: 33px;
+}
+
+.botoes-fundo2{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+.botoes-fundo2 button{
+    width: 33px;
+    height: 33px;
+}
+
+.botoes-fundo3{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+.botoes-fundo3 button{
+    width: 33px;
+    height: 33px;
+}
+
+.botoes-fundo4{
+    display: flex;
+    flex-wrap: wrap;
+    width: 120px;
+}
+.botoes-fundo4 button{
+    width: 33px;
+    height: 33px;
+    margin-right: 10px;
+}
+
+.botoes-fundo5{
+    display: flex;
+    flex-wrap: wrap;
+    width: 120px;
+}
+.botoes-fundo5 button{
+    width: 33px;
+    height: 33px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+.label-temas{
+    color: gray;
+    font-weight: bold;
 }

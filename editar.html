@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,58 @@
     <link rel="stylesheet" href="styleeditar.css">
     <script src="scripteditar.js" defer></script>
 </head>
+
 <body>
-    <div class="edit-header">
+    <header class="header">
+        <div class="esquerda">
             <img class="edit-logo" src="imagens/logo-branca.png" alt="logo-branca">
             <label class="edit-label" for="edit">| Editar</label>
-            <div class="edit-gera-pdf"><label for="edit-gera-pdf" >Gerar PDF interativo</label></div>
-            <div class="edit-compartilhar"><img class="edit-icon-compartilhar" src="imagens/icones/compartilhar.png" alt="compartilhar"><label for="edit-compartilhar">Compartilhar</label></div>
-            <img id="btn-edit-sair" class="edit-sair" src="imagens/icones/sair-3.png" alt="saida">lab
-   
+        </div>
+        <div class="direita">
+            <button class="edit-gera-pdf">
+                <label for="edit-gera-pdf" class="label-gera-pdf">Gerar PDF interativo</label>
+            </button>
+           <button class="edit-compartilhar">
+               <img class="edit-icon-compartilhar" src="imagens/icones/compartilhar.png"
+                        alt="compartilhar"><label for="edit-compartilhar" class="label-compartilhar"></label> Compartilhar</label>
+           </button>
+            <img id="btn-edit-sair" class="edit-sair" src="imagens/icones/sair-3.png" alt="saida">
+        </div>
+    </header>
+    <div class="container-edit">
+        <h1>Temas</h1>
+        <div class="fundo-cores">
+            <label class="label-temas" for="label-temas">Cores</label>
+            <div class="container-botoes">
+                <div class="botoes-fundo1">
+                    <label for="">Fundo/<br>Botões</label>
+                    <button></button>
+                </div>
+                <div class="botoes-fundo2">
+                    <label for="">Cor do <br>Cartão </label>
+                    <button></button>
+                </div>
+                <div class="botoes-fundo3">
+                    <label for="">Destaque<br>da Foto</label>
+                    <button></button>
+                </div>
+                <div class="botoes-fundo4">
+                    <label for="">Fontes dos Botões</label>
+                    <button></button>
+                    <button></button>
+                </div>
+                <div class="botoes-fundo5">
+                    <label for="">Ícones destaque</label>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
+
 </body>
+
 </html>

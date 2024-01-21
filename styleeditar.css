@@ -16,24 +16,40 @@
 body {
     background-color: rgba(194, 186, 186, 0.329);
 }
+
 header {
     background-color: rgb(0, 0, 0);
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    justify-content:space-between;  
+    justify-content: space-between;
 }
-.direita, .esquerda{
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    flex-wrap: wrap;
+
+}
+
+.container-edit{
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+}
+
+.direita,
+.esquerda {
     display: flex;
     align-items: center;
-    padding:10px;
+    padding: 10px;
 }
 
 .edit-logo {
-    width: 100px; 
+    width: 100px;
     margin-left: 40px;
-    margin-right: 50px;  
+    margin-right: 50px;
 }
 
 .edit-label {
@@ -47,115 +63,253 @@ header {
     margin-right: 20px;
 }
 
-.edit-gera-pdf{
+.edit-gera-pdf {
     border: 0px;
     background-color: rgb(11, 170, 209);
-    border-radius:20px;
+    border-radius: 20px;
     padding: 7px 15px;
-    
-    
+
+
 }
-.edit-gera-pdf label{
+
+.edit-gera-pdf label {
     color: black;
 }
 
-.edit-compartilhar{
+.edit-compartilhar {
     border: 0;
     background-color: rgb(11, 170, 209);
     margin-left: 40px;
-    border-radius:20px;
+    border-radius: 20px;
     padding: 7px 15px;
+    display: flex;
+    align-items: center;
 }
 
-.edit-compartilhar img{
-    width: 13px;
-    
+.edit-compartilhar img {
+    width: 17px;
+    padding-right: 5px;
+
 }
-.edit-compartilhar label{
+
+.edit-compartilhar label {
     color: black;
 }
 
-.edit-gera-pdf:hover, .edit-compartilhar:hover, .label-compartilhar:hover, .label-gera-pdf:hover{
+.edit-gera-pdf:hover,
+.edit-compartilhar:hover,
+.label-compartilhar:hover,
+.label-gera-pdf:hover {
     cursor: pointer;
 }
-.container-edit h1{
+
+
+
+
+.container-edit {
     margin-left: 40px;
-    margin-top:30px;
+    margin-top: 30px;
 }
-.fundo-cores{
-    border: 1px solid black;
+
+.fundo-cores {
+    background-color: white;
     width: 400px;
-    height:85px;
+    height: 85px;
     align-items: center;
-    margin-left:40px;
     padding: 10px;
-    
-}
-.container-botoes{
-    display: flex;
-}
-.container-botoes label{
-    font-weight:bold;
-}
-.botoes-fundo1{
-    display: flex;
-    flex-direction: column;
-    width: 100px;
-}
-.botoes-fundo1 button{
-    width: 33px;
-    height: 33px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.562);
+    border-radius: 8px;
+    margin-bottom: 30px;
+
 }
 
-.botoes-fundo2{
-    display: flex;
-    flex-direction: column;
-    width: 100px;
-}
-.botoes-fundo2 button{
-    width: 33px;
-    height: 33px;
-}
-
-.botoes-fundo3{
-    display: flex;
-    flex-direction: column;
-    width: 100px;
-}
-.botoes-fundo3 button{
-    width: 33px;
-    height: 33px;
-}
-
-.botoes-fundo4{
-    display: flex;
-    flex-wrap: wrap;
-    width: 120px;
-}
-.botoes-fundo4 button{
-    width: 33px;
-    height: 33px;
-    margin-right: 10px;
-}
-
-.botoes-fundo5{
-    display: flex;
-    flex-wrap: wrap;
-    width: 120px;
-}
-.botoes-fundo5 button{
-    width: 33px;
-    height: 33px;
-    margin-right: 10px;
-}
-
-
-
-
-
-
-
-.label-temas{
+.label-temas {
     color: gray;
     font-weight: bold;
+}
+
+.container-botoes {
+    display: flex;
+}
+
+.container-botoes label {
+    font-weight: bold;
+}
+
+.botoes-fundo1 {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.botoes-fundo1 button {
+    width: 33px;
+    height: 33px;
+    border: 3px solid gray;
+    border-radius: 5px;
+    background-color: red;
+}
+
+.botoes-fundo2 {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.botoes-fundo2 button {
+    width: 33px;
+    height: 33px;
+    border: 3px solid gray;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.botoes-fundo3 {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.botoes-fundo3 button {
+    width: 33px;
+    height: 33px;
+    border: 3px solid gray;
+    border-radius: 5px;
+    background-color: #E016D9;
+}
+
+.botoes-fundo4 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 120px;
+}
+
+.botoes-fundo4>.btn1 {
+    border: 3px solid rgb(58, 214, 219);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.botoes-fundo4 button {
+    width: 33px;
+    height: 33px;
+    margin-right: 10px;
+    border: 3px solid gray;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.botoes-fundo5 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 120px;
+}
+
+.botoes-fundo5>.btn1 {
+    border: 3px solid rgb(58, 214, 219);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.botoes-fundo5 button {
+    width: 33px;
+    height: 33px;
+    margin-right: 10px;
+    border: 3px solid gray;
+    border-radius: 5px;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.edit-links {
+    background-color: white;
+    width: 400px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.562);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-links-label {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.5em 0.5em 0.5em;
+}
+
+.pesquisar {
+    display: flex;
+    width: 360px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgba(128, 128, 128, 0.233);
+}
+
+.pesquisar img {
+    width: 24px;
+    padding: 5px;
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.pesquisar input {
+    width: 305px;
+    padding: 3px;
+    border: 0px;
+}
+
+.config-button {
+    width: 350px;
+    border: 0px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.233);
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+.config-button label {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.config-button img {
+    width: 23px;
+    position: absolute;
+    left: 0;
+    padding-left: 29px;
+}
+
+.destaque:hover{
+    cursor: pointer;
+    background-color: rgb(18, 122, 70);
+    color: white;
+    padding: 11px;
+    transition: 0.1s;
+}
+.destaque-label:hover{
+    cursor: pointer;
+}
+
+.container-cartao{
+    width: 350px;
+    border: 1px solid rgb(150, 13, 13);
+    height:1000px;
+    margin-top: 40px;
+    
 }

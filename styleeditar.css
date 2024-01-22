@@ -368,11 +368,19 @@ header {
     height: 180px;
     background-color: white;
     border-radius: 50%;
-    border: 9px solid  rgba(11, 170, 190, 0.726);
+    border: 9px solid #00B9B5;
     position: absolute;
 
 }
-
+.campos-cartao input{
+    margin: 5px 0px;
+    border: 2px solid white;
+    background-color:transparent;
+    text-align: center;
+    font-size:1.25em;
+    font-weight: bold;
+    padding: 3px 0px;
+}
 .acoes-cartao{
     display: flex;
     flex-direction: row;
@@ -402,7 +410,8 @@ header {
 
 .modo-off-cartão img{
     width: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-bottom: 2px;
 }
 .modo-off-cartão label{
     color: #00B9B5;

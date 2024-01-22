@@ -297,13 +297,46 @@ header {
 
 .destaque:hover{
     cursor: pointer;
-    background-color: rgb(18, 122, 70);
+    background-color: rgb(18, 122, 35);
     color: white;
     padding: 11px;
     transition: 0.1s;
 }
 .destaque-label:hover{
     cursor: pointer;
+}
+
+.label-rodape{
+    font-size:0.8em;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; 
+}
+.btn-gerar-link{
+    background-color: rgba(5, 138, 5, 0.726);
+    color: white;
+    border: 0px;
+    border-radius:20px;
+    font-size: 0.8em;
+    padding: 6px;
+    margin: 0px 20px 20px 15px;
+}
+.btn-gerar-link:hover, .btn-salvar-edit:hover{
+    cursor: pointer;
+}
+.btn-salvar-edit{
+    background-color: rgba(11, 170, 190, 0.726);
+    border: 0px;
+    border-radius:20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 6px;
+    margin: 0px 20px 6px 15px;
+}
+.label-rodape2{
+    text-align: center;
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container-cartao{

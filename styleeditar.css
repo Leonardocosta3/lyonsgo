@@ -10,11 +10,14 @@
 :root {
     --fonte1: 'Passion One', sans-serif;
     --fonte2: 'Poppins', sans-serif;
-    --fonte3: 'Roboto', sans-serif;
+    --fonte3: 'Arial, Helvetica, sans-serif';
+
+    --color1: #00AFEF;
 }
 
 body {
     background-color: rgba(194, 186, 186, 0.329);
+    
 }
 
 header {
@@ -341,7 +344,6 @@ header {
 
 .container-cartao{
     width: 350px;
-    border: 1px solid rgb(150, 13, 13);
     height:1000px;
     margin-top: 40px;
     display: flex;
@@ -380,13 +382,27 @@ header {
     font-size:1.25em;
     font-weight: bold;
     padding: 3px 0px;
+    color: #fff;
 }
+.campos-cartao-nome::placeholder{
+    color: #fff;
+}
+.campos-cartao-descricao::placeholder{
+    color:var(--color1);
+}
+
+.campos-cartao-arroba::placeholder{
+    color: #fff;
+    font-size:17px;
+}
+
 .acoes-cartao{
     display: flex;
     flex-direction: row;
     padding-top: 15px;
     margin-bottom: 20px;
     margin-top: 5px;
+    align-items: center;
 }
 .acoes-cartao img{
     width: 30px;
@@ -395,10 +411,10 @@ header {
 }
 .acoes-cartao input{
     margin-right:10px;
-    padding: 0px 20px;
+    padding: 6px 20px;
     border-radius: 15px;
     border: 0px;
-    background-color: #00B9B5;
+    background-color: var(--color1);
 }
 
 .modo-off-cartão {
@@ -414,6 +430,90 @@ header {
     margin-bottom: 2px;
 }
 .modo-off-cartão label{
-    color: #00B9B5;
+    color:var(--color1);
     font-size: 0.4em;
 }
+.caixa {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fdfbfb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 4px;
+  }
+  
+  .mais {
+    color: #ffffff;
+  }
+  .addLink-cartao{
+    width: 250px;
+    display:flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    padding: 10px 0px;
+  }
+  .label-add-link{
+    color: #ffffff;
+    font-size: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .addLink-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.txt-cartao{
+    width: 250px;
+    margin-top:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-txt-cartao{
+    width: 250px;
+    background-color:black;
+    border: 2px solid white;
+    margin-bottom: 5px;
+    height: 80px;
+    text-align: center;
+    
+    
+}
+.input-txt-cartao::placeholder{
+    white-space: pre-line;
+    color:var(--color1);
+    
+}
+
+.btn-nfc{
+    width: 250px;
+    border-radius: 7px;
+    border: 0px;
+    background-color: rgb(5, 138, 5);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 4px;
+    margin-bottom: 40px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.btn-nfc label{
+    color: #ffff;
+    padding: 0px 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-nfc img{
+    width: 20px;
+    cursor: pointer;
+}
+
+

@@ -224,17 +224,6 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .edit-links {
     background-color: white;
     width: 400px;
@@ -344,11 +333,12 @@ header {
 
 .container-cartao{
     width: 350px;
-    height:1000px;
+    height:100%;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid red;
     
     
 }
@@ -363,7 +353,7 @@ header {
     margin-top: 50px;
     border-radius: 15px;
     padding-top: 165px;
-    position:absolute
+    position: relative;
 }
 .foto-cartao{
     width: 180px;
@@ -404,11 +394,7 @@ header {
     margin-top: 5px;
     align-items: center;
 }
-.acoes-cartao img{
-    width: 30px;
-    height: 20px; 
-    margin-left: 10px;
-}
+
 .acoes-cartao input{
     margin-right:10px;
     padding: 6px 20px;
@@ -426,12 +412,33 @@ header {
 
 .modo-off-cartão img{
     width: 20px;
-    margin-right: 10px;
     margin-bottom: 2px;
 }
 .modo-off-cartão label{
     color:var(--color1);
     font-size: 0.4em;
+}
+
+.enviar-cartão2 {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-left: 10px; 
+    
+}
+
+.enviar-cartão2 img{
+    width: 36px;
+    height: 20px; 
+    margin-bottom: 2px;
+    
+}
+.enviar-cartão2 label{
+    color:var(--color1);
+    font-size: 0.7em;
+}
+.hover:hover{
+    cursor: pointer;
 }
 .caixa {
     width: 20px;
@@ -515,5 +522,33 @@ header {
     width: 20px;
     cursor: pointer;
 }
+.rodape-cartao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rodape-cartao img{
+    width: 150px;
+    height: 150px;
+}
+.editar-rodape{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.editar-rodape img{
+    width: 50px;
+    height: 50px;
+}
+.editar-rodape label{
+   
+}
 
-
+.icone-rodape{
+    display: flex;
+    flex-direction: row;
+}
+.icone-rodape img{
+    width: 30px;
+    height: 30px;
+}

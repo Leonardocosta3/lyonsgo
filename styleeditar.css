@@ -17,7 +17,7 @@
 
 body {
     background-color: rgba(194, 186, 186, 0.329);
-    
+
 }
 
 header {
@@ -28,15 +28,16 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     flex-wrap: wrap;
 
 }
 
-.container-edit{
+.container-edit {
     width: 430px;
     display: flex;
     flex-direction: column;
@@ -287,62 +288,66 @@ header {
     padding-left: 29px;
 }
 
-.destaque:hover{
+.destaque:hover {
     cursor: pointer;
     background-color: rgb(18, 122, 35);
     color: white;
     padding: 11px;
     transition: 0.1s;
 }
-.destaque-label:hover{
+
+.destaque-label:hover {
     cursor: pointer;
 }
 
-.label-rodape{
-    font-size:0.8em;
+.label-rodape {
+    font-size: 0.8em;
     margin: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center; 
+    text-align: center;
 }
-.btn-gerar-link{
+
+.btn-gerar-link {
     background-color: rgba(5, 138, 5, 0.726);
     color: white;
     border: 0px;
-    border-radius:20px;
+    border-radius: 20px;
     font-size: 0.8em;
     padding: 6px;
     margin: 0px 20px 20px 15px;
 }
-.btn-gerar-link:hover, .btn-salvar-edit:hover{
+
+.btn-gerar-link:hover,
+.btn-salvar-edit:hover {
     cursor: pointer;
 }
-.btn-salvar-edit{
+
+.btn-salvar-edit {
     background-color: rgba(11, 170, 190, 0.726);
     border: 0px;
-    border-radius:20px;
+    border-radius: 20px;
     font-size: 0.8em;
     font-weight: bold;
     padding: 6px;
     margin: 0px 20px 6px 15px;
 }
-.label-rodape2{
+
+.label-rodape2 {
     text-align: center;
     font-size: 0.8em;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container-cartao{
+.container-cartao {
     width: 350px;
-    height:100%;
+    height: 100%;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
-    
-    
 }
-.cartao{
+
+.cartao {
     background-color: black;
     display: flex;
     position: relative;
@@ -355,38 +360,41 @@ header {
     padding-top: 165px;
     position: relative;
 }
-.foto-cartao{
+
+.foto-cartao {
     width: 180px;
     height: 180px;
     background-color: white;
     border-radius: 50%;
     border: 9px solid #00B9B5;
     position: absolute;
-
 }
-.campos-cartao input{
+
+.campos-cartao input {
     margin: 5px 0px;
     border: 2px solid white;
-    background-color:transparent;
+    background-color: transparent;
     text-align: center;
-    font-size:1.25em;
+    font-size: 1.25em;
     font-weight: bold;
     padding: 3px 0px;
     color: #fff;
 }
-.campos-cartao-nome::placeholder{
+
+.campos-cartao-nome::placeholder {
     color: #fff;
 }
-.campos-cartao-descricao::placeholder{
-    color:var(--color1);
+
+.campos-cartao-descricao::placeholder {
+    color: var(--color1);
 }
 
-.campos-cartao-arroba::placeholder{
+.campos-cartao-arroba::placeholder {
     color: #fff;
-    font-size:17px;
+    font-size: 17px;
 }
 
-.acoes-cartao{
+.acoes-cartao {
     display: flex;
     flex-direction: row;
     padding-top: 15px;
@@ -395,8 +403,8 @@ header {
     align-items: center;
 }
 
-.acoes-cartao input{
-    margin-right:10px;
+.acoes-cartao input {
+    margin-right: 10px;
     padding: 6px 20px;
     border-radius: 15px;
     border: 0px;
@@ -406,40 +414,42 @@ header {
 .modo-off-cartão {
     display: flex;
     flex-direction: column;
-    align-items:center;
-    margin-right: 20px;  
+    align-items: center;
+    margin-right: 20px;
 }
 
-.modo-off-cartão img{
+.modo-off-cartão img {
     width: 20px;
     margin-bottom: 2px;
 }
-.modo-off-cartão label{
-    color:var(--color1);
+
+.modo-off-cartão label {
+    color: var(--color1);
     font-size: 0.4em;
 }
 
 .enviar-cartão2 {
     display: flex;
     flex-direction: column;
-    align-items:center;
-    margin-left: 10px; 
-    
+    align-items: center;
+    margin-left: 10px;
 }
 
-.enviar-cartão2 img{
+.enviar-cartão2 img {
     width: 36px;
-    height: 20px; 
+    height: 20px;
     margin-bottom: 2px;
-    
 }
-.enviar-cartão2 label{
-    color:var(--color1);
+
+.enviar-cartão2 label {
+    color: var(--color1);
     font-size: 0.7em;
 }
-.hover:hover{
+
+.hover:hover {
     cursor: pointer;
 }
+
 .caixa {
     width: 20px;
     height: 20px;
@@ -452,103 +462,200 @@ header {
     cursor: pointer;
     border-radius: 4px;
     margin-bottom: 4px;
-  }
-  
-  .mais {
+}
+
+.mais {
     color: #ffffff;
-  }
-  .addLink-cartao{
+}
+
+.addLink-cartao {
     width: 250px;
-    display:flex;
+    display: flex;
     justify-content: space-around;
     border-bottom: 2px solid #ffffff;
     border-top: 2px solid #ffffff;
     padding: 10px 0px;
-  }
-  .label-add-link{
+}
+
+.label-add-link {
     color: #ffffff;
     font-size: 8px;
     font-family: Arial, Helvetica, sans-serif;
-  }
-  .addLink-sec{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
 }
-.txt-cartao{
-    width: 250px;
-    margin-top:5px;
+
+.addLink-sec {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.input-txt-cartao{
+
+.txt-cartao {
     width: 250px;
-    background-color:black;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-txt-cartao {
+    width: 250px;
+    background-color: black;
     border: 2px solid white;
     margin-bottom: 5px;
     height: 80px;
     text-align: center;
-    
-    
-}
-.input-txt-cartao::placeholder{
-    white-space: pre-line;
-    color:var(--color1);
-    
 }
 
-.btn-nfc{
+.input-txt-cartao::placeholder {
+    white-space: pre-line;
+    color: var(--color1);
+}
+
+.btn-nfc {
     width: 250px;
     border-radius: 7px;
     border: 0px;
     background-color: rgb(5, 138, 5);
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     padding: 4px;
     margin-bottom: 40px;
     margin-top: 5px;
     cursor: pointer;
 }
-.btn-nfc label{
+
+.btn-nfc label {
     color: #ffff;
     padding: 0px 30px;
     font-weight: bold;
     cursor: pointer;
 }
-.btn-nfc img{
+
+.btn-nfc img {
     width: 20px;
     cursor: pointer;
 }
-.rodape-cartao{
+
+.rodape-cartao {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.rodape-cartao img{
-    width: 150px;
-    height: 150px;
+
+.rodape-cartao input {
+    border: 0px;
+    color: var(--color1);
+    margin: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
 }
-.editar-rodape{
+
+.rodape-cartao label {
+    text-align: center;
+}
+
+.rodape-cartao img {
+    margin: 10px;
+    width: 150px;
+    height: 170px;
+}
+
+.editar-rodape {
+    background-color: white;
+    width: 250px;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    align-items: center;
 }
-.editar-rodape img{
+
+.editar-rodape img {
     width: 50px;
     height: 50px;
 }
-.editar-rodape label{
-   
+
+.editar-rodape label {
+    color: var(--color1);
 }
 
-.icone-rodape{
+.icone-rodape {
     display: flex;
     flex-direction: row;
 }
-.icone-rodape img{
+
+.icone-rodape img {
     width: 30px;
     height: 30px;
 }
+
+.icone-rodape img:hover {
+    cursor: pointer;
+}
+
+.info-contato {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .conteudo-div {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .conteudo-div-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+  }
+  .conteudo-div-label{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .conteudo-div-btn{
+    border: 0px;
+  }
+  
+  #fecharDiv {
+    margin-top: 10px;
+  }
+
+  .form-edit-contato{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .form-edit-contato label{
+    font-family: var(--fonte3);
+    margin: 3px 0px;
+  }
+  .form-edit-contato input{
+        padding: 6px;
+        margin: 4px 0px;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.247);
+  }
+  .form-edit-contato button{
+    border: 0px;
+    background-color: rgb(11, 170, 209);
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-top: 5px;
+    color: white;
+  }

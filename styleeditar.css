@@ -6,13 +6,12 @@
 
 }
 
-
 :root {
     --fonte1: 'Passion One', sans-serif;
     --fonte2: 'Poppins', sans-serif;
     --fonte3: 'Arial, Helvetica, sans-serif';
-
     --color1: #00AFEF;
+
 }
 
 body {
@@ -128,6 +127,7 @@ header {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.562);
     border-radius: 8px;
     margin-bottom: 30px;
+    padding-bottom: 20px;
 
 }
 
@@ -138,6 +138,7 @@ header {
 
 .container-botoes {
     display: flex;
+    
 }
 
 .container-botoes label {
@@ -148,28 +149,28 @@ header {
     display: flex;
     flex-direction: column;
     width: 100px;
+    
 }
 
-.botoes-fundo1 button {
-    width: 33px;
-    height: 33px;
+.botoes-fundo1 input {
+    width: 35px;
+    height: 35px;
     border: 3px solid gray;
     border-radius: 5px;
-    background-color: red;
 }
 
 .botoes-fundo2 {
     display: flex;
     flex-direction: column;
     width: 100px;
+    
 }
 
-.botoes-fundo2 button {
-    width: 33px;
-    height: 33px;
+.botoes-fundo2 input {
+    width: 35px;
+    height: 35px;
     border: 3px solid gray;
     border-radius: 5px;
-    background-color: black;
 }
 
 .botoes-fundo3 {
@@ -178,12 +179,11 @@ header {
     width: 100px;
 }
 
-.botoes-fundo3 button {
-    width: 33px;
-    height: 33px;
+.botoes-fundo3 input {
+    width: 35px;
+    height: 35px;
     border: 3px solid gray;
     border-radius: 5px;
-    background-color: #E016D9;
 }
 
 .botoes-fundo4 {

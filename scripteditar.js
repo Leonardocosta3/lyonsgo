@@ -5,20 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
     var fechaContato = document.getElementById('fechar-conteudo');
 
     fechaContato.addEventListener('click', function(){
-        infoContato.style.display = 'none';
+        infoContato.classList.add('hidden');
     });
   
     botaoMostrar.addEventListener('click', function() {
-        infoContato.style.display = 'flex';
+        infoContato.classList.remove('hidden');
     });
   
     salvarFechar.addEventListener('click', function() {
-        infoContato.style.display = 'none';
+        infoContato.classList.remove('hidden');
     });
   
+    /*
+    Esconde a div caso clique fora dela
     infoContato.addEventListener('click', function(event) {
       if (event.target === infoContato) {
-        infoContato.style.display = 'none';
+        infoContato.classList.add('hidden');
       }
-    });
+    });*/
   });

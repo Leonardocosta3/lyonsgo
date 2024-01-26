@@ -121,25 +121,25 @@
                     </div>
                 </div>
                 <div class="addLink-cartao">
-                    <div class="addLink-sec">
+                    <div id="addLink-sec1" class="addLink-sec">
                         <div class="caixa">
                             <span class="mais">+</span>
                         </div>
                         <label class="label-add-link" for="">Add ícone (link)</label>
                     </div>
-                    <div class="addLink-sec">
+                    <div id="addLink-sec2" class="addLink-sec">
                         <div class="caixa">
                             <span class="mais">+</span>
                         </div>
                         <label class="label-add-link" for="">Add ícone (link)</label>
                     </div>
-                    <div class="addLink-sec">
+                    <div id="addLink-sec3" class="addLink-sec">
                         <div class="caixa">
                             <span class="mais">+</span>
                         </div>
                         <label class="label-add-link" for="">Add ícone (link)</label>
                     </div>
-                    <div class="addLink-sec">
+                    <div id="addLink-sec4" class="addLink-sec">
                         <div class="caixa">
                             <span class="mais">+</span>
                         </div>
@@ -204,12 +204,15 @@
             </div>
         </div>
     </div>
-    <div id="adiciona-icone" class="adiciona-icone">
+    <div id="adiciona-icone" class="adiciona-icone hidden">
         <div id="conteudo-add-icone" class="conteudo-add-icone">
-            <label for="" class="add-links-label">Adicionar ícone</label>
+            <div class="conteudo-add-title">
+                <label for="" class="add-links-label">Adicionar ícone</label>
+                <button id="btn-add-title" class="btn-add-title hover">X</button>
+            </div>
             <div class="add-pesquisar">
                 <input type="text" placeholder="Buscar">
-                <img src="imagens/icones/lupa.png" alt="Lupa">
+                <img class="hover" src="imagens/icones/lupa.png" alt="Lupa">
             </div>
             <div class="btn-adiciona-icone">
                 <div>
@@ -223,49 +226,62 @@
                             </tr>
                             <tr>
                                 <th>
-                                    <img src="imagens/icones/site.png" alt="">
+                                    <img src="imagens/icones/instagram.png" alt="">
                                     <label for="">Instagram</label>
                                 </th>
                             </tr>
                             <tr>
                                 <th>
-                                    <img src="imagens/icones/site.png" alt="">
+                                    <img src="imagens/icones/whatsapp.png" alt="">
                                     <label for="">Whatsapp</label>
                                 </th>
                             </tr>
                             <tr>
                                 <th>
-                                    <img src="imagens/icones/site.png" alt="">
+                                    <img src="imagens/icones/mapa.png" alt="">
                                     <label for="">Mapa</label>
                                 </th>
                             </tr>
                             <tr>
                                 <th>
-                                    <img src="imagens/icones/site.png" alt="">
+                                    <img src="imagens/icones/email.png" alt="">
                                     <label for="">E-mail</label>
                                 </th>
                             </tr>
                             <tr>
                                 <th>
-                                    <img src="imagens/icones/site.png" alt="">
+                                    <img src="imagens/icones/facebook.png" alt="">
                                     <label for="">Facebook</label>
                                 </th>
                             </tr>
                             <tr>
                                 <th>
-                                    <img src="imagens/icones/site.png" alt="">
+                                    <img src="imagens/icones/twitter.png" alt="">
                                     <label for="">Twitter</label>
                                 </th>
                             </tr>
                             <tr>
                                 <th>
-                                    <img src="imagens/icones/site.png" alt="">
-                                    <label for="">Telegram</label>
+                                    <img src="imagens/icones/pix.png" alt="">
+                                    <label for="">Chave Pix</label>
                                 </th>
                             </tr>
                         </thead>
                     </table>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="ad-icone hidden">
+        <div class="conteudo-ad-icone">
+            <div class="ad-icone-title">
+                <label for="">Adicionar ícone</label>
+                <button class="hover">X</button>
+            </div>
+            <div class="ad-link-campos">
+                <input type="text" name="" id="" placeholder="Título">
+                <input type="text" name="" id="" placeholder="Link">
+                <button class="btn-ad-link hover">Adicionar</button>
             </div>
         </div>
     </div>

@@ -633,6 +633,7 @@ header {
   }
   .conteudo-div-btn{
     border: 0px;
+    background-color: white;
   }
   
   #fecharDiv {
@@ -686,21 +687,34 @@ header {
     transform: translate(-50%, -50%);
     
   }
+  .conteudo-add-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
   .add-links-label{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
-    padding: 0.5em 0.5em 0.5em;
+    padding-left: 90px;
+  }
+  .btn-add-title{
+    border: 0px;
+    background-color: white;
   }
   .add-pesquisar{
     display: flex;
     width: 300px;
-    padding: 5px;
+    border: 3px solid  rgba(128, 128, 128, 0.233);
     border-radius: 8px;
     background-color: rgba(128, 128, 128, 0.233);
+    margin-bottom: 4px;
   }
 
   .add-pesquisar img {
-    width: 24px;
+    width: 20px;
     padding: 5px;
     margin-left: 7px;
     cursor: pointer;
@@ -715,5 +729,81 @@ header {
     overflow-y:auto ;
 }
 .btn-adiciona-icone img{
-    width: 25px;
+    width: 20px;
+}
+
+.btn-adiciona-icone th{
+    width: 270px;
+    text-align: left;
+    padding: 5px 4px;
+    display: flex;
+    margin: 3px 0px;
+       
+}
+.btn-adiciona-icone img{
+    margin-right: 25px;
+}
+.btn-adiciona-icone th:hover{
+    background-color: rgba(128, 128, 128, 0.233);
+}
+
+.ad-icone{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.conteudo-ad-icone{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ad-icone-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.ad-icone-title label{
+    font-size: 1em;
+    font-weight: bold;
+    padding-left: 90px;
+}
+.ad-icone-title button{
+    border: 0px;
+    background-color: white;
+}
+.ad-link-campos{
+    display: flex;
+    flex-direction: column;
+}
+.ad-link-campos input{
+    background-color: rgba(128, 128, 128, 0.233);
+    padding: 7px 10px;
+    border-radius: 6px;
+    border: 0px;
+    margin-bottom:7px;
+
+}
+.ad-link-campos input::placeholder{
+    color: black;
+    font-size:12px;
+}
+.btn-ad-link{
+    padding: 8px;
+    border: 0px;
+    margin-top: 10px;
+    border-radius: 50px;
+    background-color: var(--color1);
+    font-weight: bold;
 }

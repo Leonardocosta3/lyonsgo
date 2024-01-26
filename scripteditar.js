@@ -24,3 +24,34 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });*/
   });
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var btnMostrar1 = document.getElementById('addLink-sec1');
+    var btnMostrar2 = document.getElementById('addLink-sec2');
+    var btnMostrar3 = document.getElementById('addLink-sec3');
+    var btnMostrar4 = document.getElementById('addLink-sec4');
+    var addLink = document.getElementById('adiciona-icone');
+    var fechaaddLink = document.getElementById('btn-add-title');
+
+    btnMostrar1.addEventListener('click', function(){
+      addLink.classList.remove('hidden');
+    });
+
+    btnMostrar2.addEventListener('click', function(){
+      addLink.classList.remove('hidden');
+    });
+
+    btnMostrar3.addEventListener('click', function(){
+      addLink.classList.remove('hidden');
+    });
+
+    btnMostrar4.addEventListener('click', function(){
+      addLink.classList.remove('hidden');
+    });
+
+    fechaaddLink.addEventListener('click', function(){
+      addLink.classList.add('hidden');
+    })
+
+
+  })

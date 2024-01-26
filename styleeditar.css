@@ -352,7 +352,7 @@ header {
 }
 
 .cartao {
-    background-color: black;
+    background-color: rgb(3, 3, 3);
     display: flex;
     position: relative;
     flex-direction: column;

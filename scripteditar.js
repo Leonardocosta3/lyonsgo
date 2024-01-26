@@ -113,3 +113,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   });
 });
+
+const corFundo = document.getElementById('cor-fundo');
+const fundoCartao = document.getElementById('cartao');
+
+corFundo.addEventListener('change', function () {
+  const selectColor = corFundo.value;
+
+  fundoCartao.style.backgroundColor = selectColor;
+});

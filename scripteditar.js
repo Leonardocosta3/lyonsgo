@@ -115,10 +115,31 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const corFundo = document.getElementById('cor-fundo');
-const fundoCartao = document.getElementById('cartao');
+const fundoBody = document.getElementById('body');
+const corEditcontato = document.getElementById('editar-contato');
 
 corFundo.addEventListener('change', function () {
   const selectColor = corFundo.value;
+  fundoBody.style.backgroundColor = selectColor;
+  corEditcontato.style.backgroundColor = selectColor;
+});
 
+
+const corCartao = document.getElementById('cor-cartao');
+const fundoCartao = document.getElementById('cartao');
+
+corCartao.addEventListener('change', function () {
+  const selectColor = corCartao.value;
   fundoCartao.style.backgroundColor = selectColor;
 });
+
+const corDestaque = document.getElementById('cor-destaque');
+const fundoDestaque = document.getElementById('foto-cartao');
+
+corDestaque.addEventListener('change', function () {
+  const selectColor = corDestaque.value;
+  fundoDestaque.style.borderColor = selectColor;
+});
+
+
+

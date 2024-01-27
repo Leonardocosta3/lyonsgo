@@ -370,9 +370,10 @@ header {
     height: 180px;
     background-color: white;
     border-radius: 50%;
-    border: 9px solid #00B9B5;
+    border: 9px solid rgba(7, 124, 139, 0.726);
     position: absolute;
 }
+
 
 .campos-cartao input {
     margin: 5px 0px;

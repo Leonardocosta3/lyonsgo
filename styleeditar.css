@@ -656,13 +656,14 @@ header {
         border-radius: 3px;
         border: 1px solid rgba(0, 0, 0, 0.247);
   }
-  .form-edit-contato button{
+  .edit-contato-salvar{
     border: 0px;
     background-color: rgb(11, 170, 209);
     border-radius: 5px;
     padding: 10px 0px;
     margin-top: 5px;
     color: white;
+    width: 100%;
   }
 
   .adiciona-icone{

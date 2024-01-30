@@ -13,12 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   salvarFechar.addEventListener('click', function () {
-    infoContato.classList.remove('hidden');
+    infoContato.classList.add('hidden');
   });
 
-  /*
-  Esconde a div caso clique fora dela
-  infoContato.addEventListener('click', function(event) {
+  
+  /*infoContato.addEventListener('click', function(event) {
     if (event.target === infoContato) {
       infoContato.classList.add('hidden');
     }

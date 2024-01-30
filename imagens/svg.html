@@ -5,47 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulando svg</title>
-
+    <style>
+        #icon-whats path{
+                     
+        }
+        .caminho1{
+            fill: rgb(240, 247, 241);
+        }
+        .caminho2{
+            fill: rgb(255, 255, 255);
+            stroke: rgb(7, 7, 7);
+        }
+        .caminho3{
+            fill: rgb(255, 255, 255);
+        }
+    </style>
 </head>
 
 <body>
-    <div id="svgContainer">
-        
+    <div id="container-icon">
+        <img src="icones/icon-whatsapp.svg" onload="fetchSvg(this)"/>
     </div>
+
     <script>
-        function loadAndManipulateSVG(svgPath, color) {
-            var xhr = new XMLHttpRequest();
+       const fetchSvg =(image)=>{
+            fetch(image.src)
+                .then((response)=> response.text())
+                .then((response)=> {
+                    const span = document.createElement("span");
+                    span.innerHTML = response;
+                    const inlineSvg = span.getElementsByTagName("svg")[0];
+                    image.parentNode.replaceChild(inlineSvg,image);
+                    return true;
+                });
 
-            // Abrir e enviar uma solicitação GET para o arquivo SVG
-            xhr.open('GET', svgPath, true);
-            xhr.send();
-
-            // Quando a resposta for carregada
-            xhr.onload = function () {
-                // Verificar se a solicitação foi bem-sucedida
-                if (xhr.status === 200) {
-                    // Obter o conteúdo do arquivo SVG
-                    var svgContent = xhr.responseText;
-
-                    // Inserir o conteúdo do SVG no DOM
-                    document.getElementById('svgContainer').innerHTML = svgContent;
-
-                    // Selecionar todos os elementos <path> dentro do SVG inserido
-                    var paths = document.querySelectorAll('#svgContainer svg path');
-
-                    // Iterar sobre os elementos <path> e definir o atributo 'fill' para a cor especificada
-                    paths.forEach(function (path) {
-                        path.setAttribute('fill', color);
-                    });
-                } else {
-                    console.error('Falha ao carregar o arquivo SVG');
-                }
-            };
-        }
-
-        // Chamada da função para carregar e manipular o SVG
-        loadAndManipulateSVG('imagens\icones\whatsapp-svgrepo-com.svg', 'red'); // Altere 'red' para a cor desejada
+       };
     </script>
+
+   
 </body>
 
 </html>

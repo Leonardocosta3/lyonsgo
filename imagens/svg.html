@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando svg</title>
+
+</head>
+
+<body>
+    <div id="svgContainer">
+        
+    </div>
+    <script>
+        function loadAndManipulateSVG(svgPath, color) {
+            var xhr = new XMLHttpRequest();
+
+            // Abrir e enviar uma solicitação GET para o arquivo SVG
+            xhr.open('GET', svgPath, true);
+            xhr.send();
+
+            // Quando a resposta for carregada
+            xhr.onload = function () {
+                // Verificar se a solicitação foi bem-sucedida
+                if (xhr.status === 200) {
+                    // Obter o conteúdo do arquivo SVG
+                    var svgContent = xhr.responseText;
+
+                    // Inserir o conteúdo do SVG no DOM
+                    document.getElementById('svgContainer').innerHTML = svgContent;
+
+                    // Selecionar todos os elementos <path> dentro do SVG inserido
+                    var paths = document.querySelectorAll('#svgContainer svg path');
+
+                    // Iterar sobre os elementos <path> e definir o atributo 'fill' para a cor especificada
+                    paths.forEach(function (path) {
+                        path.setAttribute('fill', color);
+                    });
+                } else {
+                    console.error('Falha ao carregar o arquivo SVG');
+                }
+            };
+        }
+
+        // Chamada da função para carregar e manipular o SVG
+        loadAndManipulateSVG('imagens\icones\whatsapp-svgrepo-com.svg', 'red'); // Altere 'red' para a cor desejada
+    </script>
+</body>
+
+</html>

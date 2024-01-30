@@ -6,43 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulando svg</title>
     <style>
-        #icon-whats path{
-                     
+        #icone-whats path {
+            fill: black;
         }
-        .caminho1{
-            fill: rgb(240, 247, 241);
-        }
-        .caminho2{
-            fill: rgb(255, 255, 255);
-            stroke: rgb(7, 7, 7);
-        }
-        .caminho3{
-            fill: rgb(255, 255, 255);
+
+        .caminho1 {
+            fill: black;
         }
     </style>
 </head>
 
 <body>
     <div id="container-icon">
-        <img src="icones/icon-whatsapp.svg" onload="fetchSvg(this)"/>
+        <img src="icones/icon-whatsapp.svg" onload="fetchSvg(this)" />
     </div>
-
+    <div>
+        <img src="icones/whatsapp-svgrepo-com.svg" onload="fetchSvg(this)">
+    </div>
+    <div>
+        <input id="muda-cor" type="color" value="">
+    </div>
     <script>
-       const fetchSvg =(image)=>{
+        const fetchSvg = (image) => {
             fetch(image.src)
-                .then((response)=> response.text())
-                .then((response)=> {
+                .then((response) => response.text())
+                .then((response) => {
                     const span = document.createElement("span");
                     span.innerHTML = response;
                     const inlineSvg = span.getElementsByTagName("svg")[0];
-                    image.parentNode.replaceChild(inlineSvg,image);
+                    image.parentNode.replaceChild(inlineSvg, image);
                     return true;
                 });
 
-       };
+        };
+
+        const mudaCor = document.getElementById("muda-cor");
+        const cor = document.querySelector('#whats');
+
+        mudaCor.addEventListener('changeColor', function() {
+            const cores = mudaCor.value;
+            cor.fill.color = cores;
+        });
     </script>
 
-   
+
 </body>
 
 </html>

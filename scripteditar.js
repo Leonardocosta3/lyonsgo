@@ -66,11 +66,15 @@ document.addEventListener('DOMContentLoaded', function () {
   var fecharadIcon = document.getElementById('btn-ad-icon');
   var adIcone = document.getElementById('ad-icone');
   var fechaLink = document.getElementById('adiciona-icone');
+  var txtTitulo = document.getElementById('txt-titulo');
+  var addCampo = document.getElementById('ad-link-campos');
 
 
   abriradIcon1.addEventListener('click', function () {
     adIcone.classList.remove('hidden');
     fechaLink.classList.add('hidden');
+    
+
   });
   abriradIcon2.addEventListener('click', function () {
     adIcone.classList.remove('hidden');
@@ -100,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
     adIcone.classList.remove('hidden');
     fechaLink.classList.add('hidden');
   });
-
   fecharadIcon.addEventListener('click', function () {
     adIcone.classList.add('hidden');
     fechaLink.classList.remove('hidden');
@@ -109,9 +112,10 @@ document.addEventListener('DOMContentLoaded', function () {
   adlink.addEventListener('click', function () {
     adIcone.classList.add('hidden');
     fechaLink.classList.add('hidden');
-
   });
 });
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -130,6 +134,7 @@ corFundo.addEventListener('change', function () {
   const selectColor = corFundo.value;
   fundoBody.style.backgroundColor = selectColor;
   corEditcontato.style.backgroundColor = selectColor;
+  corEditcontato.style.color = 'white';
   corNome.style.color = selectColor;
   corOff.setAttribute('fill', selectColor);
   corLabel.style.color = selectColor;

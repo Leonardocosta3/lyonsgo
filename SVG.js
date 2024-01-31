@@ -1,8 +1,11 @@
-const corFundo = document.getElementById('teste-color');
-const modo = document.getElementById('modo-off').querySelector('path.off');
+document.addEventListener('DOMContentLoaded', function () {
+  // Seleciona o SVG pelo ID
+  const corFundo = document.getElementById('teste-color');
+  const svgElement = document.getElementById('modo-off').querySelector('path');
 
-corFundo.addEventListener('change', function () {
+  corFundo.addEventListener('change', function () {
+    select = corFundo.value;
+    svgElement.setAttribute('fill', select);
+  })
   
-  const selectColor = corFundo.value;
-  modo.setAttribute('fill', selectColor);
 });

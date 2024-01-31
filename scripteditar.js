@@ -113,10 +113,16 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+
 const corFundo = document.getElementById('cor-fundo');
 const fundoBody = document.getElementById('body');
 const corEditcontato = document.getElementById('editar-contato');
 const corNome = document.getElementById('campos-cartao-nome');
+const corOff = document.getElementById('modo-off').querySelector('path');
+const corLabel = document.getElementById('modo-off-label');
+const corIconEnviar = document.getElementById('icone-enviar').querySelector('path');
+const corEnviar = document.getElementById('label-enviar');
 
 
 corFundo.addEventListener('change', function () {
@@ -125,12 +131,11 @@ corFundo.addEventListener('change', function () {
   fundoBody.style.backgroundColor = selectColor;
   corEditcontato.style.backgroundColor = selectColor;
   corNome.style.color = selectColor;
-
+  corOff.setAttribute('fill', selectColor);
+  corLabel.style.color = selectColor;
+  corEnviar.style.color = selectColor;
+  corIconEnviar.setAttribute('fill', selectColor);
 });
-
-
-
-
 
 const corCartao = document.getElementById('cor-cartao');
 const fundoCartao = document.getElementById('cartao');
@@ -148,5 +153,4 @@ corDestaque.addEventListener('change', function () {
   fundoDestaque.style.borderColor = selectColor;
 });
 
-
-
+});

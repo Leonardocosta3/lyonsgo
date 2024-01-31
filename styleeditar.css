@@ -415,7 +415,7 @@ header {
     padding: 6px 20px;
     border-radius: 15px;
     border: 0px;
-    background-color: var(--color1);
+    background-color: white;
 }
 
 .modo-off-cartão {
@@ -425,12 +425,8 @@ header {
     margin-right: 20px;
 }
 
-.modo-off-cartão svg path {
-    fill: #00a3ef;
-}
-
 .modo-off-cartão label {
-    color: var(--color1);
+    color: white;
     font-size: 0.5em;
     margin-top: 2px;
 }
@@ -443,12 +439,11 @@ header {
 }
 
 .enviar-cartão2 svg path {
-    fill: var(--color1);
     margin-bottom: 2px;
 }
 
 .enviar-cartão2 label {
-    color: var(--color1);
+    color: white;
     font-size: 0.7em;
 }
 
@@ -557,6 +552,7 @@ header {
     font-size: 1em;
     font-weight: bold;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .rodape-cartao label {

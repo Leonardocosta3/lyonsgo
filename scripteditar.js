@@ -116,12 +116,20 @@ document.addEventListener('DOMContentLoaded', function () {
 const corFundo = document.getElementById('cor-fundo');
 const fundoBody = document.getElementById('body');
 const corEditcontato = document.getElementById('editar-contato');
+const corNome = document.getElementById('campos-cartao-nome');
+
 
 corFundo.addEventListener('change', function () {
+  
   const selectColor = corFundo.value;
   fundoBody.style.backgroundColor = selectColor;
   corEditcontato.style.backgroundColor = selectColor;
+  corNome.style.color = selectColor;
+
 });
+
+
+
 
 
 const corCartao = document.getElementById('cor-cartao');

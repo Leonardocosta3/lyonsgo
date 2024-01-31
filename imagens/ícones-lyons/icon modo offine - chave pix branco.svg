@@ -1,0 +1,10 @@
+<svg id="modo-off" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_12)">
+<path d="M2.5 17.5H17.5V2.5H2.5V17.5ZM7.5 7.5H12.5V12.5H7.5V7.5ZM22.5 2.5V17.5H37.5V2.5H22.5ZM32.5 12.5H27.5V7.5H32.5V12.5ZM2.5 37.5H17.5V22.5H2.5V37.5ZM7.5 27.5H12.5V32.5H7.5V27.5ZM35 22.5H37.5V32.5H30V30H27.5V37.5H22.5V22.5H30V25H35V22.5ZM35 35H37.5V37.5H35V35ZM30 35H32.5V37.5H30V35Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1_12">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
+</svg>

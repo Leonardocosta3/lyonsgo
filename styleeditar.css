@@ -368,10 +368,12 @@ header {
 .foto-cartao {
     width: 180px;
     height: 180px;
-    background-color: white;
+    background: rgb(255, 255, 255) url('imagens/fundo-foto.png') center center no-repeat;
+    background-size: 300px 250px;
     border-radius: 50%;
-    border: 9px solid rgba(7, 124, 139, 0.726);
+    border: 9px solid rgba(12, 147, 165, 0.726);
     position: absolute;
+    
 }
 
 
@@ -423,14 +425,14 @@ header {
     margin-right: 20px;
 }
 
-.modo-off-cartão img {
-    width: 20px;
-    margin-bottom: 2px;
+.modo-off-cartão svg path {
+    fill: #00a3ef;
 }
 
 .modo-off-cartão label {
     color: var(--color1);
-    font-size: 0.4em;
+    font-size: 0.5em;
+    margin-top: 2px;
 }
 
 .enviar-cartão2 {
@@ -440,9 +442,8 @@ header {
     margin-left: 10px;
 }
 
-.enviar-cartão2 img {
-    width: 36px;
-    height: 20px;
+.enviar-cartão2 svg path {
+    fill: var(--color1);
     margin-bottom: 2px;
 }
 
@@ -458,7 +459,7 @@ header {
 .caixa {
     width: 20px;
     height: 20px;
-    border: 2px solid #fdfbfb;
+    border: 2px solid #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -509,6 +510,7 @@ header {
     margin-bottom: 5px;
     height: 80px;
     text-align: center;
+    color: #00a3ef;
 }
 
 .input-txt-cartao::placeholder {

@@ -66,19 +66,16 @@ document.addEventListener('DOMContentLoaded', function () {
   var fecharadIcon = document.getElementById('btn-ad-icon');
   var adIcone = document.getElementById('ad-icone');
   var fechaLink = document.getElementById('adiciona-icone');
-  var txtTitulo = document.getElementById('txt-titulo');
-  var addCampo = document.getElementById('ad-link-campos');
-
 
   abriradIcon1.addEventListener('click', function () {
     adIcone.classList.remove('hidden');
     fechaLink.classList.add('hidden');
-    
 
   });
   abriradIcon2.addEventListener('click', function () {
     adIcone.classList.remove('hidden');
     fechaLink.classList.add('hidden');
+
   });
   abriradIcon3.addEventListener('click', function () {
     adIcone.classList.remove('hidden');
@@ -114,8 +111,6 @@ document.addEventListener('DOMContentLoaded', function () {
     fechaLink.classList.add('hidden');
   });
 });
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
 

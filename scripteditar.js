@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
   abriradIcon1.addEventListener('click', function () {
     adIcone.classList.remove('hidden');
     fechaLink.classList.add('hidden');
+    
 
   });
   abriradIcon2.addEventListener('click', function () {
